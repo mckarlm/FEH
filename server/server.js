@@ -5,7 +5,7 @@ const knex = require('knex');
 
 const PORT = process.env.PORT || 8008;
 const server = express();
-const routes = require('./db/routes');
+const routes = require('./routes');
 
 server.use(bodyparser.json());
 server.use(bodyparser.urlencoded({ extended : true }));

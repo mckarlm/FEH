@@ -1,11 +1,29 @@
 // Update with your config settings.
+require('dotenv').config();
+const path = require('path')
+
 
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      filename: './dev.sqlite3'
+      database: process.env.DATABASE_NAME,
+      user:     process.env.DATABASE_USER,
+      password: process.env.DATABASE_PASSWORD,
+      timezone: 'UTC'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      directory: path.join(__dirname, 'server', 'db', 'migrations'),
+      tableName: 'knex_migrations'
+    },
+    seeds: {
+      directory: path.join(__dirname, 'server', 'db', 'seeds'),
+      tableName: 'knex_migrations'
     }
   },
 
