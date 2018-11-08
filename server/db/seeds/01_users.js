@@ -5,7 +5,10 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('users').insert([
-        {username:'testuser', password:'test'}
+        {
+          username:'testuser',
+          password:'test'
+        }
       ]);
     });
 };
