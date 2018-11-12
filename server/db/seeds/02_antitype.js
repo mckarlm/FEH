@@ -33,6 +33,10 @@ exports.seed = function(knex, Promise) {
           id: 6,
           eff_vs: 'tome'
         },
+        {
+          id: 7,
+          eff_vs: 'cavalry, armor'
+        },
       ]);
     });
 };
