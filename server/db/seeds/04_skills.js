@@ -321,7 +321,7 @@ exports.seed = function (knex, Promise) {
           id: 100029,
           name: 'Armorsmasher+(eff)',
           description: `Effective against armored foes.
-          Neutralizes armored foes' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          Neutralizes armored foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
           type: 'sword',
           mt: 14,
           hp: 3,
@@ -391,7 +391,7 @@ exports.seed = function (knex, Promise) {
           id: 100036,
           name: 'Zanbato+(eff)',
           description: `Effective against cavalry foes.
-          Neutralizes cavalry foes' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          Neutralizes cavalry foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
           type: 'sword',
           mt: 14,
           hp: 3,
@@ -587,7 +587,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110001,
           name: 'Folkvangr',
-          description: `At start of turn, if unit's HP ≤ 50%, grants Atk+5 for 1 turn.`,
+          description: `At start of turn, if unit\'s HP ≤ 50%, grants Atk+5 for 1 turn.`,
           prf: true,
           type: 'sword',
           mt: 16
@@ -595,7 +595,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110002,
           name: 'Folkvangr(eff)',
-          description: `At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat.
+          description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.
           If unit has weapon-triangle advantage, boosts Atk
           by 20%. If unit has weapon-triangle disadvantage,
           reduces Atk by 20%.`,
@@ -608,7 +608,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110003,
           name: 'Folkvangr(atk)',
-          description: `At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat.`,
+          description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
           type: 'sword',
           mt: 18,
@@ -618,7 +618,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110004,
           name: 'Folkvangr(spd)',
-          description: `At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat.`,
+          description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -629,7 +629,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110005,
           name: 'Folkvangr(def)',
-          description: `At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat.`,
+          description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -640,7 +640,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110006,
           name: 'Folkvangr(res)',
-          description: `At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat.`,
+          description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -737,7 +737,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110015,
           name: 'Exalted Falchion',
-          description: `Grants Spd+3. Grants bonus to Atk/Spd/Def/Res = current bonus on each of unit's stats. (each stat calculated independently)`,
+          description: `Effective against dragon foes. Grants Spd+3. Grants bonus to Atk/Spd/Def/Res = current bonus on each of unit\'s stats. (each stat calculated independently)`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -748,7 +748,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110016,
           name: 'Wing Sword',
-          description: ``,
+          description: `Effective against armored and cavalry foes.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -757,7 +757,8 @@ exports.seed = function (knex, Promise) {
         {
           id: 110017,
           name: 'Wing Sword(eff)',
-          description: `If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.`,
+          description: `Effective against armored and cavalry foes.
+          If unit\'s Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -768,7 +769,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110018,
           name: 'Wing Sword(atk)',
-          description: ``,
+          description: `Effective against armored and cavalry foes.`,
           prf: true,
           type: 'sword',
           mt: 18,
@@ -779,7 +780,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110019,
           name: 'Wing Sword(spd)',
-          description: ``,
+          description: `Effective against armored and cavalry foes.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -791,7 +792,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110020,
           name: 'Wing Sword(def)',
-          description: ``,
+          description: `Effective against armored and cavalry foes.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -803,7 +804,7 @@ exports.seed = function (knex, Promise) {
         {
           id: 110021,
           name: 'Wing Sword(res)',
-          description: ``,
+          description: `Effective against armored and cavalry foes.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -824,13 +825,247 @@ exports.seed = function (knex, Promise) {
         {
           id: 110023,
           name: 'Falchion(Valentia)(eff)',
-          description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
+          description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.
+          If unit\'s HP = 100% at the start of combat and unit initiates combat, unit attacks twice then takes 5 damage after combat.`,
           prf: true,
           type: 'sword',
           mt: 16,
           hp: 3,
           refine: 1,
           anti: 5
+        },
+        {
+          id: 110024,
+          name: 'Falchion(Valentia)(atk)',
+          description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
+          prf: true,
+          type: 'sword',
+          mt: 18,
+          hp: 5,
+          refine: 2,
+          anti: 5
+        },
+        {
+          id: 110025,
+          name: 'Falchion(Valentia)(spd)',
+          description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          refine: 3,
+          anti: 5
+        },
+        {
+          id: 110026,
+          name: 'Falchion(Valentia)(def)',
+          description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          def: 4,
+          refine: 4,
+          anti: 5
+        },
+        {
+          id: 110027,
+          name: 'Falchion(Valentia)(res)',
+          description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          res: 4,
+          refine: 5,
+          anti: 5
+        },
+        {
+          id: 110028,
+          name: 'Beloved Zofia',
+          description: `Grants Def+3. If unit\'s HP = 100% at the start of combat, grants Atk/Spd/Def/Res+4, but if unit attacked, unit takes 4 damage after combat.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          def: 3
+        },
+        {
+          id: 110029,
+          name: 'Royal Sword',
+          description: `Grants Spd+3. If unit is within 2 spaces of an ally, grants unit Special cooldown charge +1 per unit\'s attack. (Only highest value applied. Does not stack.)`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          spd: 3
+        },
+        {
+          id: 110030,
+          name: 'Golden Dagger',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          id: 110031,
+          name: 'Golden Dagger(eff)',
+          description: `Accelerates Special trigger (cooldown count-1).
+          At start of combat, if Special is ready, grants Atk/Spd/Def/Res+3 during combat and unit can counterattack regardless of foe\'s range.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          refine: 1
+        },
+        {
+          id: 110032,
+          name: 'Golden Dagger(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 18,
+          hp: 5,
+          refine: 2
+        },
+        {
+          id: 110033,
+          name: 'Golden Dagger(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          refine: 3
+        },
+        {
+          id: 110034,
+          name: 'Golden Dagger(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          def: 4,
+          refine: 4
+        },
+        {
+          id: 110035,
+          name: 'Golden Dagger(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          res: 4,
+          refine: 5
+        },
+        {
+          id: 110036,
+          name: 'Divine Tyrfing',
+          description: `Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          res: 3
+        },
+        {
+          id: 110037,
+          name: 'Ayra\s Blade',
+          description: `Grants Spd+3. If unit\'s Spd - foe\'s Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill used, only highest value applied.)`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          spd: 3
+        },
+        {
+          id: 110038,
+          name: 'Mystletainn',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          id: 110039,
+          name: 'Mystletainn(eff)',
+          description: `Accelerates Special trigger (cooldown count-1).
+          Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.`,
+          prf: true,
+          type: 'sword',
+          mt: 19,
+          hp: 3,
+          spd: 3,
+          def: 3,
+          res: 3,
+          refine: 1
+        },
+        {
+          id: 110040,
+          name: 'Mystletainn(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 18,
+          hp: 5,
+          refine: 2
+        },
+        {
+          id: 110041,
+          name: 'Mystletainn(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          refine: 3
+        },
+        {
+          id: 110042,
+          name: 'Mystletainn(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          def: 4,
+          refine: 4
+        },
+        {
+          id: 110043,
+          name: 'Mystletainn(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          hp: 5,
+          res: 4,
+          refine: 5
+        },
+        {
+          id: 110044,
+          name: 'Tyrfing',
+          description: `Grants Def+4 in battle if unit\'s HP ≤ 50%.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          id: 110045,
+          name: 'Dark Mystletainn',
+          description: `Accelerates Special trigger (cooldown count-1). If Special triggers before or during combat, grants Special cooldown count-2 after combat.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          id: 110046,
+          name: '',
+          description: ``,
+          prf: true,
+          type: 'sword',
+          mt: 0
         },
       ]);
     });
@@ -840,8 +1075,8 @@ exports.seed = function (knex, Promise) {
 {
   id: 110000,
   name: '',
-  prf: true,
   description: ``,
+  prf: true,
   type: 'sword',
   mt: 0
 },
