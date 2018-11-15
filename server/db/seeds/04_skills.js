@@ -12,43 +12,42 @@ All skills are sorted based on how they appear in
 the Search Skill function when inheriting skills
 within the game.
 
-Weapons in particular are sorted as follows:
-
-SWORD
-R TOME
-LANCE
-B TOME
-AXE
-G TOME
-DRAGONSTONE
-BOW
-DAGGER
-STAFF
 
 ============================================================
 
-SECOND digit determines "PRF" status
+SECOND digit determines weapon type, if applicable. Weapons are sorted as follows:
+
+1 : SWORD, R TOME
+2 : LANCE, B TOME
+3 : AXE,   G TOME
+4 : DRAGONSTONE
+5 : BOW
+6 : DAGGER
+7 : STAFF
+
+THIRD digit determines "PRF" status
 Normal skils have a 0.
 PRFs have a 1 after the category number, and go at the 
 bottom of the respective category list. Example:
 
-100000 : Iron Sword
-100001 : Steel Sword
-100002 : Silver Sword
-100003 : Silver Sword+
-110000 : Falchion (Archanea)
-110001 : Excalibur
-110002 : Dark Excalibur
 
-200000 : Rally Defense
-200001 : Rally Defense+
-210000 : Future Vision
+1100000 : Iron Sword
+1100001 : Steel Sword
+1100002 : Silver Sword
+1100003 : Silver Sword+
+1110000 : Falchion (Archanea)
+1310001 : Excalibur
+1310002 : Dark Excalibur
 
-300000 : New Moon
-300001 : Moonbow
-300002 : Luna
-300003 : Aether
-310000 : Radiant Aether
+2000000 : Rally Defense
+2000001 : Rally Defense+
+2010000 : Future Vision
+
+3000000 : New Moon
+3000001 : Moonbow
+3000002 : Luna
+3000003 : Aether
+3010000 : Radiant Aether
 
 And so forth.
 
@@ -79,41 +78,41 @@ exports.seed = function (knex, Promise) {
       return knex('skills').insert([
         // =============== SWORD =============== //
         {
-          id: 100000,
+          id: 1000000,
           name: 'SWORD',
           description: 'description',
           type: 'sword'
         },
         {
-          id: 100001,
+          id: 1000001,
           name: 'Iron Sword',
           description: ``,
           type: 'sword',
           mt: 6
         },
         {
-          id: 100002,
+          id: 1000002,
           name: 'Steel Sword',
           description: ``,
           type: 'sword',
           mt: 8
         },
         {
-          id: 100003,
+          id: 1100003,
           name: 'Silver Sword',
           description: ``,
           type: 'sword',
           mt: 11
         },
         {
-          id: 100004,
+          id: 1100004,
           name: 'Silver Sword+',
           description: ``,
           type: 'sword',
           mt: 15,
         },
         {
-          id: 100005,
+          id: 1100005,
           name: 'Silver Sword+(atk)',
           description: ``,
           type: 'sword',
@@ -122,7 +121,7 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 100006,
+          id: 1100006,
           name: 'Silver Sword+(spd)',
           description: ``,
           type: 'sword',
@@ -132,7 +131,7 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 100007,
+          id: 1100007,
           name: 'Silver Sword+(def)',
           description: ``,
           type: 'sword',
@@ -142,7 +141,7 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 100008,
+          id: 1100008,
           name: 'Silver Sword+(res)',
           description: ``,
           type: 'sword',
@@ -152,49 +151,49 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 100009,
+          id: 1100009,
           name: 'Brave Sword',
           description: `Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
           type: 'sword',
           mt: 5
         },
         {
-          id: 100010,
+          id: 1100010,
           name: 'Brave Sword+',
           description: `Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
           type: 'sword',
           mt: 8
         },
         {
-          id: 100011,
+          id: 1100011,
           name: 'Killing Edge',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 7
         },
         {
-          id: 100012,
+          id: 1100012,
           name: 'Killing Edge+',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 11
         },
         {
-          id: 100013,
+          id: 1100013,
           name: 'Slaying Edge',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 10
         },
         {
-          id: 100014,
+          id: 1100014,
           name: 'Slaying Edge+',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 100015,
+          id: 1100015,
           name: 'Slaying Edge+(atk)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
@@ -203,7 +202,7 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 100016,
+          id: 1100016,
           name: 'Slaying Edge+(spd)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
@@ -213,7 +212,7 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 100017,
+          id: 1100017,
           name: 'Slaying Edge+(def)',
           description: `Accelerates Special trigger (cooldown count-1)`,
           type: 'sword',
@@ -223,7 +222,7 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 100018,
+          id: 1100018,
           name: 'Slaying Edge+(res)',
           description: `Accelerates Special trigger (cooldown count-1)`,
           type: 'sword',
@@ -233,21 +232,21 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 100019,
+          id: 1100019,
           name: 'Wo Dao',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
           mt: 9
         },
         {
-          id: 100020,
+          id: 1100020,
           name: 'Wo Dao+',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
           mt: 13
         },
         {
-          id: 100021,
+          id: 1100021,
           name: 'Wo Dao+(atk)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -256,7 +255,7 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 100022,
+          id: 1100022,
           name: 'Wo Dao+(spd)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -266,7 +265,7 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 100023,
+          id: 1100023,
           name: 'Wo Dao+(def)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -276,7 +275,7 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 100024,
+          id: 1100024,
           name: 'Wo Dao+(res)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -286,7 +285,7 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 100025,
+          id: 1100025,
           name: 'Armorslayer',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -294,7 +293,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100026,
+          id: 1100026,
           name: 'Armorslayer+',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -302,7 +301,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100027,
+          id: 1100027,
           name: 'Armorsmasher',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -310,7 +309,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100028,
+          id: 1100028,
           name: 'Armorsmasher+',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -318,7 +317,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100029,
+          id: 1100029,
           name: 'Armorsmasher+(eff)',
           description: `Effective against armored foes.
           Neutralizes armored foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
@@ -329,7 +328,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100030,
+          id: 1100030,
           name: 'Armorsmasher+(atk)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -339,7 +338,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100031,
+          id: 1100031,
           name: 'Armorsmasher+(spd)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -350,7 +349,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100032,
+          id: 1100032,
           name: 'Armorsmasher+(def)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -361,7 +360,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100033,
+          id: 1100033,
           name: 'Armorsmasher+(res)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -372,7 +371,7 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 100034,
+          id: 1100034,
           name: 'Zanbato',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -380,7 +379,7 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 100035,
+          id: 1100035,
           name: 'Zanbato+',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -388,7 +387,7 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 100036,
+          id: 1100036,
           name: 'Zanbato+(eff)',
           description: `Effective against cavalry foes.
           Neutralizes cavalry foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
@@ -399,7 +398,7 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 100037,
+          id: 1100037,
           name: 'Zanbato+(atk)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -409,7 +408,7 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 100038,
+          id: 1100038,
           name: 'Zanbato+(spd)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -420,7 +419,7 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 100039,
+          id: 1100039,
           name: 'Zanbato+(def)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -431,7 +430,7 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 100040,
+          id: 1100040,
           name: 'Zanbato+(res)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -442,49 +441,49 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 100041,
+          id: 1100041,
           name: 'Ruby Sword',
           description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
           type: 'sword',
           mt: 8
         },
         {
-          id: 100042,
+          id: 1100042,
           name: 'Ruby Sword+',
           description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 100043,
+          id: 1100043,
           name: 'Firesweep S',
           description: `Unit and foe cannot counterattack.`,
           type: 'sword',
           mt: 11
         },
         {
-          id: 100044,
+          id: 1100044,
           name: 'Firesweep S+',
           description: `Unit and foe cannot counterattack.`,
           type: 'sword',
           mt: 15
         },
         {
-          id: 100045,
+          id: 1100045,
           name: 'Safeguard',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
           mt: 10
         },
         {
-          id: 100046,
+          id: 1100046,
           name: 'Safeguard+',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 100047,
+          id: 1100047,
           name: 'Safeguard+(atk)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -493,7 +492,7 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 100048,
+          id: 1100048,
           name: 'Safeguard+(spd)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -503,7 +502,7 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 100049,
+          id: 1100049,
           name: 'Safeguard+(def)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -513,7 +512,7 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 100050,
+          id: 1100050,
           name: 'Safeguard+(res)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -523,21 +522,21 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 100051,
+          id: 1100051,
           name: 'Barrier Blade',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
           mt: 10
         },
         {
-          id: 100052,
+          id: 1100052,
           name: 'Barrier Blade+',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 100053,
+          id: 1100053,
           name: 'Barrier Blade+(atk)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -546,7 +545,7 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 100054,
+          id: 1100054,
           name: 'Barrier Blade+(spd)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -556,7 +555,7 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 100055,
+          id: 1100055,
           name: 'Barrier Blade+(def)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -566,7 +565,7 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 100056,
+          id: 1100056,
           name: 'Barrier Blade+(res)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -577,7 +576,7 @@ exports.seed = function (knex, Promise) {
         },
         // =============== PRF SWORD =============== //
         {
-          id: 110000,
+          id: 111000,
           name: 'PRF SWORD',
           description: `description`,
           prf: true,
@@ -1061,6 +1060,15 @@ exports.seed = function (knex, Promise) {
         },
         {
           id: 110046,
+          name: 'Light Brand',
+          description: `Grants Def+3. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          def: 3
+        },
+        {
+          id: 110047,
           name: '',
           description: ``,
           prf: true,

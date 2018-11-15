@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('unit_bases', table => {
+  return knex.schema.createTable('base_units', table => {
     table.increments();
     table.string('name').unique().notNullable();
     table.string('description').notNullable();
@@ -28,5 +28,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('unit_bases');
+  return knex.schema.dropTable('base_units');
 };
