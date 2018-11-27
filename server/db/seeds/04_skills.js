@@ -1,74 +1,3 @@
-/*
-ID LEGEND
----------
-
-FIRST digit decides category
-Weapons begin with 1
-Assists begin with 2
-Specials begin with 3
-Slot skills begin with 4, 5, or 6
-
-All skills are sorted based on how they appear in
-the Search Skill function when inheriting skills
-within the game.
-
-
-============================================================
-
-SECOND digit determines weapon type, if applicable. Weapons are sorted as follows:
-
-1 : SWORD, R TOME
-2 : LANCE, B TOME
-3 : AXE,   G TOME
-4 : DRAGONSTONE
-5 : BOW
-6 : DAGGER
-7 : STAFF
-
-THIRD digit determines "PRF" status
-Normal skils have a 0.
-PRFs have a 1 after the category number, and go at the 
-bottom of the respective category list. Example:
-
-
-1100000 : Iron Sword
-1100001 : Steel Sword
-1100002 : Silver Sword
-1100003 : Silver Sword+
-1110000 : Falchion (Archanea)
-1310001 : Excalibur
-1310002 : Dark Excalibur
-
-2000000 : Rally Defense
-2000001 : Rally Defense+
-2010000 : Future Vision
-
-3000000 : New Moon
-3000001 : Moonbow
-3000002 : Luna
-3000003 : Aether
-3010000 : Radiant Aether
-
-And so forth.
-
-All PRFs are ordered by which the default wielder appears
-in the catalog. For example, "Divine Tyrfing" would come
-before "Tyrfing" despite Tyrfing being implemented first
-as Sigurd comes before Seliph, and Sigurd wields the 
-upgraded version instead of the normal Tyrfing that Seliph
-naturally comes with. 
-
-As it still follows the other categorizing methods, Gradivus
-would come before Aura and Excalibur despite Hardin
-appearing after Linde and Merric, as the Gradivus is a LANCE
-and would be prioritized over Aura and Excalibur, which are
-B TOME and G TOME, respectively.
-
-============================================================
-
-ALL REMAINING NUMBERS are yet to be used, except as a counter
-*/
-
 
 exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
@@ -78,41 +7,35 @@ exports.seed = function (knex, Promise) {
       return knex('skills').insert([
         // =============== SWORD =============== //
         {
-          id: 1000000,
           name: 'SWORD',
           description: 'description',
           type: 'sword'
         },
         {
-          id: 1000001,
           name: 'Iron Sword',
           description: ``,
           type: 'sword',
           mt: 6
         },
         {
-          id: 1000002,
           name: 'Steel Sword',
           description: ``,
           type: 'sword',
           mt: 8
         },
         {
-          id: 1100003,
           name: 'Silver Sword',
           description: ``,
           type: 'sword',
           mt: 11
         },
         {
-          id: 1100004,
           name: 'Silver Sword+',
           description: ``,
           type: 'sword',
           mt: 15,
         },
         {
-          id: 1100005,
           name: 'Silver Sword+(atk)',
           description: ``,
           type: 'sword',
@@ -121,7 +44,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 1100006,
           name: 'Silver Sword+(spd)',
           description: ``,
           type: 'sword',
@@ -131,7 +53,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 1100007,
           name: 'Silver Sword+(def)',
           description: ``,
           type: 'sword',
@@ -141,7 +62,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 1100008,
           name: 'Silver Sword+(res)',
           description: ``,
           type: 'sword',
@@ -151,49 +71,44 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 1100009,
           name: 'Brave Sword',
           description: `Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
           type: 'sword',
-          mt: 5
+          mt: 5,
+          spd: -5
         },
         {
-          id: 1100010,
           name: 'Brave Sword+',
           description: `Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
           type: 'sword',
-          mt: 8
+          mt: 8,
+          spd: -5
         },
         {
-          id: 1100011,
           name: 'Killing Edge',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 7
         },
         {
-          id: 1100012,
           name: 'Killing Edge+',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 11
         },
         {
-          id: 1100013,
           name: 'Slaying Edge',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 10
         },
         {
-          id: 1100014,
           name: 'Slaying Edge+',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 1100015,
           name: 'Slaying Edge+(atk)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
@@ -202,7 +117,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 1100016,
           name: 'Slaying Edge+(spd)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'sword',
@@ -212,7 +126,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 1100017,
           name: 'Slaying Edge+(def)',
           description: `Accelerates Special trigger (cooldown count-1)`,
           type: 'sword',
@@ -222,7 +135,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 1100018,
           name: 'Slaying Edge+(res)',
           description: `Accelerates Special trigger (cooldown count-1)`,
           type: 'sword',
@@ -232,21 +144,18 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 1100019,
           name: 'Wo Dao',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
           mt: 9
         },
         {
-          id: 1100020,
           name: 'Wo Dao+',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
           mt: 13
         },
         {
-          id: 1100021,
           name: 'Wo Dao+(atk)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -255,7 +164,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 1100022,
           name: 'Wo Dao+(spd)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -265,7 +173,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 1100023,
           name: 'Wo Dao+(def)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -275,7 +182,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 1100024,
           name: 'Wo Dao+(res)',
           description: `Deals +10 damage when Special triggers.`,
           type: 'sword',
@@ -285,7 +191,6 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 1100025,
           name: 'Armorslayer',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -293,7 +198,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100026,
           name: 'Armorslayer+',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -301,7 +205,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100027,
           name: 'Armorsmasher',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -309,7 +212,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100028,
           name: 'Armorsmasher+',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -317,7 +219,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100029,
           name: 'Armorsmasher+(eff)',
           description: `Effective against armored foes.
           Neutralizes armored foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
@@ -328,7 +229,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100030,
           name: 'Armorsmasher+(atk)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -338,7 +238,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100031,
           name: 'Armorsmasher+(spd)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -349,7 +248,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100032,
           name: 'Armorsmasher+(def)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -360,7 +258,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100033,
           name: 'Armorsmasher+(res)',
           description: `Effective against armored foes.`,
           type: 'sword',
@@ -371,7 +268,6 @@ exports.seed = function (knex, Promise) {
           anti: 4
         },
         {
-          id: 1100034,
           name: 'Zanbato',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -379,7 +275,6 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 1100035,
           name: 'Zanbato+',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -387,7 +282,6 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 1100036,
           name: 'Zanbato+(eff)',
           description: `Effective against cavalry foes.
           Neutralizes cavalry foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
@@ -398,7 +292,6 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 1100037,
           name: 'Zanbato+(atk)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -408,7 +301,6 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 1100038,
           name: 'Zanbato+(spd)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -419,7 +311,6 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 1100039,
           name: 'Zanbato+(def)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -430,7 +321,6 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 1100040,
           name: 'Zanbato+(res)',
           description: `Effective against cavalry foes.`,
           type: 'sword',
@@ -441,49 +331,42 @@ exports.seed = function (knex, Promise) {
           anti: 2
         },
         {
-          id: 1100041,
           name: 'Ruby Sword',
           description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
           type: 'sword',
           mt: 8
         },
         {
-          id: 1100042,
           name: 'Ruby Sword+',
           description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 1100043,
           name: 'Firesweep S',
           description: `Unit and foe cannot counterattack.`,
           type: 'sword',
           mt: 11
         },
         {
-          id: 1100044,
           name: 'Firesweep S+',
           description: `Unit and foe cannot counterattack.`,
           type: 'sword',
           mt: 15
         },
         {
-          id: 1100045,
           name: 'Safeguard',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
           mt: 10
         },
         {
-          id: 1100046,
           name: 'Safeguard+',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 1100047,
           name: 'Safeguard+(atk)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -492,7 +375,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 1100048,
           name: 'Safeguard+(spd)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -502,7 +384,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 1100049,
           name: 'Safeguard+(def)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -512,7 +393,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 1100050,
           name: 'Safeguard+(res)',
           description: `If foe initiates combat, grants Def+7 during combat.`,
           type: 'sword',
@@ -522,21 +402,18 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 1100051,
           name: 'Barrier Blade',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
           mt: 10
         },
         {
-          id: 1100052,
           name: 'Barrier Blade+',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
           mt: 14
         },
         {
-          id: 1100053,
           name: 'Barrier Blade+(atk)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -545,7 +422,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 1100054,
           name: 'Barrier Blade+(spd)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -555,7 +431,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 1100055,
           name: 'Barrier Blade+(def)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -565,7 +440,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 1100056,
           name: 'Barrier Blade+(res)',
           description: `If foe initiates combat, grants Res+7 during combat.`,
           type: 'sword',
@@ -576,7 +450,6 @@ exports.seed = function (knex, Promise) {
         },
         // =============== PRF SWORD =============== //
         {
-          id: 111000,
           name: 'PRF SWORD',
           description: `description`,
           prf: true,
@@ -584,7 +457,6 @@ exports.seed = function (knex, Promise) {
           mt: 0
         },
         {
-          id: 110001,
           name: 'Folkvangr',
           description: `At start of turn, if unit\'s HP ≤ 50%, grants Atk+5 for 1 turn.`,
           prf: true,
@@ -592,7 +464,6 @@ exports.seed = function (knex, Promise) {
           mt: 16
         },
         {
-          id: 110002,
           name: 'Folkvangr(eff)',
           description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.
           If unit has weapon-triangle advantage, boosts Atk
@@ -605,7 +476,6 @@ exports.seed = function (knex, Promise) {
           refine: 1
         },
         {
-          id: 110003,
           name: 'Folkvangr(atk)',
           description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
@@ -615,7 +485,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 110004,
           name: 'Folkvangr(spd)',
           description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
@@ -626,7 +495,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 110005,
           name: 'Folkvangr(def)',
           description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
@@ -637,7 +505,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 110006,
           name: 'Folkvangr(res)',
           description: `At start of combat, if unit\'s HP ≤ 80%, grants Atk/Def+7 during combat.`,
           prf: true,
@@ -648,16 +515,14 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 110007,
           name: 'Niu',
-          description: `Grants Spd+3. Adds 50% of total bonuses on foe to unit's Atk/Spd/Def/Res during combat.`,
+          description: `Grants Spd+3. Adds 50% of total bonuses on foe to unit\'s Atk/Spd/Def/Res during combat.`,
           prf: true,
           type: 'sword',
           mt: 16,
           spd: 3
         },
         {
-          id: 110008,
           name: 'Laevatein',
           description: `Grants Atk+3. Adds total bonuses on unit to damage dealt.`,
           prf: true,
@@ -666,7 +531,6 @@ exports.seed = function (knex, Promise) {
           atk: 3
         },
         {
-          id: 110009,
           name: 'Falchion(Archanea)',
           description: `Effective against dragon foes. At the start of every third turn, restores 10 HP.`,
           prf: true,
@@ -675,7 +539,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110010,
           name: 'Falchion(Archanea)(eff)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.
           Grants Atk/Spd/Def/Res+2 to allies within 2 spaces during combat.`,
@@ -687,7 +550,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110011,
           name: 'Falchion(Archanea)(atk)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -698,7 +560,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110012,
           name: 'Falchion(Archanea)(spd)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -710,7 +571,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110013,
           name: 'Falchion(Archanea)(def)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -722,7 +582,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110014,
           name: 'Falchion(Archanea)(res)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -734,7 +593,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110015,
           name: 'Exalted Falchion',
           description: `Effective against dragon foes. Grants Spd+3. Grants bonus to Atk/Spd/Def/Res = current bonus on each of unit\'s stats. (each stat calculated independently)`,
           prf: true,
@@ -745,7 +603,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110016,
           name: 'Wing Sword',
           description: `Effective against armored and cavalry foes.`,
           prf: true,
@@ -754,10 +611,9 @@ exports.seed = function (knex, Promise) {
           anti: 7
         },
         {
-          id: 110017,
           name: 'Wing Sword(eff)',
           description: `Effective against armored and cavalry foes.
-          If unit\'s Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.`,
+          If unit\'s Spd - foe\'s Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.`,
           prf: true,
           type: 'sword',
           mt: 16,
@@ -766,7 +622,6 @@ exports.seed = function (knex, Promise) {
           anti: 7
         },
         {
-          id: 110018,
           name: 'Wing Sword(atk)',
           description: `Effective against armored and cavalry foes.`,
           prf: true,
@@ -777,7 +632,6 @@ exports.seed = function (knex, Promise) {
           anti: 7
         },
         {
-          id: 110019,
           name: 'Wing Sword(spd)',
           description: `Effective against armored and cavalry foes.`,
           prf: true,
@@ -789,7 +643,6 @@ exports.seed = function (knex, Promise) {
           anti: 7
         },
         {
-          id: 110020,
           name: 'Wing Sword(def)',
           description: `Effective against armored and cavalry foes.`,
           prf: true,
@@ -801,7 +654,6 @@ exports.seed = function (knex, Promise) {
           anti: 7
         },
         {
-          id: 110021,
           name: 'Wing Sword(res)',
           description: `Effective against armored and cavalry foes.`,
           prf: true,
@@ -813,7 +665,6 @@ exports.seed = function (knex, Promise) {
           anti: 7
         },
         {
-          id: 110022,
           name: 'Falchion(Valentia)',
           description: `Effective against dragon foes. At the start of every third turn, restores 10 HP.`,
           prf: true,
@@ -822,7 +673,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110023,
           name: 'Falchion(Valentia)(eff)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.
           If unit\'s HP = 100% at the start of combat and unit initiates combat, unit attacks twice then takes 5 damage after combat.`,
@@ -834,7 +684,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110024,
           name: 'Falchion(Valentia)(atk)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -845,7 +694,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110025,
           name: 'Falchion(Valentia)(spd)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -857,7 +705,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110026,
           name: 'Falchion(Valentia)(def)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -869,7 +716,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110027,
           name: 'Falchion(Valentia)(res)',
           description: `Effective against dragon foes. At the start of every second turn, restores 10 HP.`,
           prf: true,
@@ -881,7 +727,6 @@ exports.seed = function (knex, Promise) {
           anti: 5
         },
         {
-          id: 110028,
           name: 'Beloved Zofia',
           description: `Grants Def+3. If unit\'s HP = 100% at the start of combat, grants Atk/Spd/Def/Res+4, but if unit attacked, unit takes 4 damage after combat.`,
           prf: true,
@@ -890,7 +735,6 @@ exports.seed = function (knex, Promise) {
           def: 3
         },
         {
-          id: 110029,
           name: 'Royal Sword',
           description: `Grants Spd+3. If unit is within 2 spaces of an ally, grants unit Special cooldown charge +1 per unit\'s attack. (Only highest value applied. Does not stack.)`,
           prf: true,
@@ -899,7 +743,6 @@ exports.seed = function (knex, Promise) {
           spd: 3
         },
         {
-          id: 110030,
           name: 'Golden Dagger',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -907,7 +750,6 @@ exports.seed = function (knex, Promise) {
           mt: 16
         },
         {
-          id: 110031,
           name: 'Golden Dagger(eff)',
           description: `Accelerates Special trigger (cooldown count-1).
           At start of combat, if Special is ready, grants Atk/Spd/Def/Res+3 during combat and unit can counterattack regardless of foe\'s range.`,
@@ -917,7 +759,6 @@ exports.seed = function (knex, Promise) {
           refine: 1
         },
         {
-          id: 110032,
           name: 'Golden Dagger(atk)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -927,7 +768,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 110033,
           name: 'Golden Dagger(spd)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -938,7 +778,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 110034,
           name: 'Golden Dagger(def)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -949,7 +788,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 110035,
           name: 'Golden Dagger(res)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -960,7 +798,6 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 110036,
           name: 'Divine Tyrfing',
           description: `Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.`,
           prf: true,
@@ -969,8 +806,7 @@ exports.seed = function (knex, Promise) {
           res: 3
         },
         {
-          id: 110037,
-          name: 'Ayra\s Blade',
+          name: 'Ayra\'s Blade',
           description: `Grants Spd+3. If unit\'s Spd - foe\'s Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill used, only highest value applied.)`,
           prf: true,
           type: 'sword',
@@ -978,7 +814,6 @@ exports.seed = function (knex, Promise) {
           spd: 3
         },
         {
-          id: 110038,
           name: 'Mystletainn',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -986,7 +821,6 @@ exports.seed = function (knex, Promise) {
           mt: 16
         },
         {
-          id: 110039,
           name: 'Mystletainn(eff)',
           description: `Accelerates Special trigger (cooldown count-1).
           Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.`,
@@ -1000,7 +834,6 @@ exports.seed = function (knex, Promise) {
           refine: 1
         },
         {
-          id: 110040,
           name: 'Mystletainn(atk)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -1010,7 +843,6 @@ exports.seed = function (knex, Promise) {
           refine: 2
         },
         {
-          id: 110041,
           name: 'Mystletainn(spd)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -1021,7 +853,6 @@ exports.seed = function (knex, Promise) {
           refine: 3
         },
         {
-          id: 110042,
           name: 'Mystletainn(def)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -1032,7 +863,6 @@ exports.seed = function (knex, Promise) {
           refine: 4
         },
         {
-          id: 110043,
           name: 'Mystletainn(res)',
           description: `Accelerates Special trigger (cooldown count-1).`,
           prf: true,
@@ -1043,7 +873,6 @@ exports.seed = function (knex, Promise) {
           refine: 5
         },
         {
-          id: 110044,
           name: 'Tyrfing',
           description: `Grants Def+4 in battle if unit\'s HP ≤ 50%.`,
           prf: true,
@@ -1051,7 +880,6 @@ exports.seed = function (knex, Promise) {
           mt: 16
         },
         {
-          id: 110045,
           name: 'Dark Mystletainn',
           description: `Accelerates Special trigger (cooldown count-1). If Special triggers before or during combat, grants Special cooldown count-2 after combat.`,
           prf: true,
@@ -1059,7 +887,6 @@ exports.seed = function (knex, Promise) {
           mt: 16
         },
         {
-          id: 110046,
           name: 'Light Brand',
           description: `Grants Def+3. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
           prf: true,
@@ -1068,8 +895,421 @@ exports.seed = function (knex, Promise) {
           def: 3
         },
         {
-          id: 110047,
-          name: '',
+          name: 'Meisterschwert',
+          description: `Inflicts Spd-5. Unit attacks twice. (Even if foe initiates combat, unit attacks twice.`,
+          prf: true,
+          type: 'sword',
+          mt: 11,
+          spd: -5
+        },
+        {
+          name: 'Binding Blade',
+          description: `Grants Def/Res+2 when this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Binding Blade(eff)',
+          description: `Grants Def/Res+4 when this unit is attacked.
+          Unit automatically makes a follow-up attack if attacked at HP ≥ 50%.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 5
+        },
+        {
+          name: 'Binding Blade(atk)',
+          description: `Grants Def/Res+4 when this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 5,
+          anti: 5
+        },
+        {
+          name: 'Binding Blade(spd)',
+          description: `Grants Def/Res+4 when this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          anti: 5
+        },
+        {
+          name: 'Binding Blade(def)',
+          description: `Grants Def/Res+4 when this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4,
+          anti: 5
+        },
+        {
+          name: 'Binding Blade(res)',
+          description: `Grants Def/Res+4 when this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4,
+          anti: 5
+        },
+        {
+          name: 'Blazing Durandal',
+          description: `Grants Atk+3. If unit\'s Atk > foe\'s Atk, unit gains Special cooldown charge +1.`,
+          prf: true,
+          type: 'sword',
+          mt: 19
+        },
+        {
+          name: 'Eckesachs',
+          description: `Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Eckesachs(eff)',
+          description: `Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions.
+          If unit is attacked by foe using bow, dagger, magic, or staff, unit receives Def/Res+6 during combat.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Eckesachs(atk)',
+          description: `Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions.`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Eckesachs(spd)',
+          description: `Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions.`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Eckesachs(def)',
+          description: `Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions.`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Eckesachs(res)',
+          description: `Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions.`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Nameless Blade',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Nameless Blade(eff)',
+          description: `Accelerates Special trigger (cooldown count-1).
+          Grants +10 to damage when Special triggers.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Nameless Blade(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Nameless Blade(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Nameless Blade(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Nameless Blade(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Durandal',
+          description: `Grants Atk+4 during combat if unit initiates attack.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Sol Katti',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Sol Katti(eff)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.
+          If unit initiates combat against foe that can counter and unit's HP ≤ 75%, unit makes a guaranteed follow-up attack.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Sol Katti(atk)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Sol Katti(spd)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Sol Katti(def)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Sol Katti(res)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Vassal\'s Blade',
+          description: `Accelerates Special trigger (cooldown count-1). If unit\'s Spd > foe\'s Spd, boosts damage dealt by 70% of difference between stats. (Maximum bonus of +7 damage from a Speed difference of 10. Does account for Phantom Speed.)`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Regal Blade',
+          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+2, during combat.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Regal Blade(eff)',
+          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.
+          If unit is within 2 spaces of an infantry magic ally, grants Atk/Spd/Def/Res+3 during combat.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Regal Blade(atk)',
+          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 3
+        },
+        {
+          name: 'Regal Blade(spd)',
+          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Regal Blade(def)',
+          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Regal Blade(res)',
+          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Sieglinde',
+          description: `Grants adjacent allies Atk+3 through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Sieglinde(eff)',
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.
+          During combat, grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces. Each stat bonus calculated independently.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Sieglinde(atk)',
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 3
+        },
+        {
+          name: 'Sieglinde(spd)',
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Sieglinde(def)',
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Sieglinde(res)',
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Storm Sieglinde',
+          description: `Grants Atk+3. If number of foes within 2 spaces (excluding target) ≥ number of allies within 2 spaces (excluding unit), grants Def/Res+3 and special cooldown charge +1 during unit's attack during combat. (Only highest value applied. Does not stack.)`,
+          prf: true,
+          type: 'sword',
+          mt: 19
+        },
+        {
+          name: 'Audhulma',
+          description: `Accelerates Special trigger (cooldown count-1). Grants Res+5.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          res: 5
+        },
+        {
+          name: 'Ragnell',
+          description: `Enables counterattack regardless of distance if this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Resolute Blade',
+          description: `Grants Atk+3. Grants +10 to damage when Special triggers.`,
+          prf: true,
+          type: 'sword',
+          mt: 19
+        },
+        {
+          name: 'Amiti',
+          description: `Spd-2. Attack twice when initiating combat.`,
+          prf: true,
+          type: 'sword',
+          mt: 11,
+          spd: -2
+        },
+        {
+          name: 'Alondite',
+          description: `Enables counterattack regardless of distance if this unit is attacked`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Falchion(Awakening)',
           description: ``,
           prf: true,
           type: 'sword',
@@ -1078,14 +1318,23 @@ exports.seed = function (knex, Promise) {
       ]);
     });
 };
+
 /*
 ≥≤
 {
-  id: 110000,
   name: '',
   description: ``,
   prf: true,
   type: 'sword',
   mt: 0
 },
-*/
+{
+  name: 'Eckesachs(eff)',
+  description: `Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions.`,
+  prf: true,
+  type: 'sword',
+  refine: 0,
+  mt: 16,
+  hp: 5
+},
+  */
