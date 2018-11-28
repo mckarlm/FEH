@@ -448,7 +448,54 @@ exports.seed = function (knex, Promise) {
           res: 4,
           refine: 5
         },
-        // =============== PRF SWORD =============== //
+        {
+          name: 'Kadomatsu',
+          description: `Grants Def/Res+2 during combat to allies within 2 spaces.`,
+          type: 'sword',
+          mt: 10
+        },
+        {
+          name: 'Kadomatsu+',
+          description: `Grants Def/Res+2 during combat to allies within 2 spaces.`,
+          type: 'sword',
+          mt: 14
+        },
+        {
+          name: 'Kadomatsu+(atk)',
+          description: `Grants Def/Res+2 during combat to allies within 2 spaces.`,
+          type: 'sword',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Kadomatsu+(spd)',
+          description: `Grants Def/Res+2 during combat to allies within 2 spaces.`,
+          type: 'sword',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Kadomatsu+(def)',
+          description: `Grants Def/Res+2 during combat to allies within 2 spaces.`,
+          type: 'sword',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Kadomatsu+(res)',
+          description: `Grants Def/Res+2 during combat to allies within 2 spaces.`,
+          type: 'sword',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        // ============= PRF SWORD ============= //
         {
           name: 'PRF SWORD',
           description: `description`,
@@ -1154,14 +1201,14 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Regal Blade',
-          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+2, during combat.`,
+          description: `If foe\'s HP is 100% when combat starts, unit receives Atk/Spd+2, during combat.`,
           prf: true,
           type: 'sword',
           mt: 16
         },
         {
           name: 'Regal Blade(eff)',
-          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.
+          description: `If foe\'s HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.
           If unit is within 2 spaces of an infantry magic ally, grants Atk/Spd/Def/Res+3 during combat.`,
           prf: true,
           type: 'sword',
@@ -1171,7 +1218,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Regal Blade(atk)',
-          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          description: `If foe\'s HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
           prf: true,
           type: 'sword',
           refine: 2,
@@ -1180,7 +1227,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Regal Blade(spd)',
-          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          description: `If foe\'s HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
           prf: true,
           type: 'sword',
           refine: 3,
@@ -1190,7 +1237,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Regal Blade(def)',
-          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          description: `If foe\'s HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
           prf: true,
           type: 'sword',
           refine: 4,
@@ -1200,7 +1247,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Regal Blade(res)',
-          description: `If foe's HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
+          description: `If foe\'s HP is 100% when combat starts, unit receives Atk/Spd+3, during combat.`,
           prf: true,
           type: 'sword',
           refine: 5,
@@ -1227,7 +1274,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sieglinde(atk)',
-          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`,
           prf: true,
           type: 'sword',
           refine: 2,
@@ -1236,7 +1283,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sieglinde(spd)',
-          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`,
           prf: true,
           type: 'sword',
           refine: 3,
@@ -1246,7 +1293,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sieglinde(def)',
-          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`,
           prf: true,
           type: 'sword',
           refine: 4,
@@ -1256,7 +1303,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sieglinde(res)',
-          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`
+          description: `At start of turn, grants adjacent allies Atk+4 for 1 turn.`,
           prf: true,
           type: 'sword',
           refine: 5,
@@ -1266,7 +1313,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Storm Sieglinde',
-          description: `Grants Atk+3. If number of foes within 2 spaces (excluding target) ≥ number of allies within 2 spaces (excluding unit), grants Def/Res+3 and special cooldown charge +1 during unit's attack during combat. (Only highest value applied. Does not stack.)`,
+          description: `Grants Atk+3. If number of foes within 2 spaces (excluding target) ≥ number of allies within 2 spaces (excluding unit), grants Def/Res+3 and special cooldown charge +1 during unit\'s attack during combat. (Only highest value applied. Does not stack.)`,
           prf: true,
           type: 'sword',
           mt: 19
@@ -1310,11 +1357,526 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Falchion(Awakening)',
-          description: ``,
+          description: `At the start of every third turn, unit recovers 10 HP.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          anti: 5
+        },
+        {
+          name: 'Falchion(Awakening)(eff)',
+          description: `At the start of every second turn, unit recovers 10 HP.
+          Grants Atk/Spd/Def/Res+4 during combat if unit is adjacent to an ally.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 5
+        },
+        {
+          name: 'Falchion(Awakening)(atk)',
+          description: `At the start of every second turn, unit recovers 10 HP.`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 5,
+          anti: 5
+        },
+        {
+          name: 'Falchion(Awakening)(spd)',
+          description: `At the start of every second turn, unit recovers 10 HP.`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          anti: 5
+        },
+        {
+          name: 'Falchion(Awakening)(def)',
+          description: `At the start of every second turn, unit recovers 10 HP.`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4,
+          anti: 5
+        },
+        {
+          name: 'Falchion(Awakening)(res)',
+          description: `At the start of every second turn, unit recovers 10 HP.`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4,
+          anti: 5
+        },
+        {
+          name: 'Sealed Falchion',
+          description: `If unit\'s HP<100% at start of combat, grants Atk/Spd/Def/Res+5 during combat.`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+          anti: 5
+        },
+        {
+          name: 'Solitary Blade',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Solitary Blade(eff)',
+          description: `Accelerates Special trigger (cooldown count-1).
+          Grants Atk/Spd+5. Inflicts Def/Res-5.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 21,
+          hp: 3,
+          spd: 5,
+          def: -5,
+          res: -5
+        },
+        {
+          name: 'Solitary Blade(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Solitary Blade(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Solitary Blade(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Solitary Blade(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Skuld',
+          description: `If Sing or Dance is used, grants Atk/Spd/Def/Res+3 to target.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Missiletainn(Dark)',
+          description: `Accelerates Special triger (cooldown count-1). Grants Special cooldown charge+1 per foe\'s attack during combat. (Does not stack. Special cooldown charge granted even if foe\'s attack deals 0 damage.`,
           prf: true,
           type: 'sword',
           mt: 0
         },
+        {
+          name: 'Yato',
+          description: `Grants Spd+4 during combat if unit initiates attack`,
+          prf: true,
+          type: 'sword',
+          mt: 16,
+        },
+        {
+          name: 'Yato(eff)',
+          description: `Grants Atk/Spd/Def/Res+2.
+          If unit is within 2 spaces of support partner, grants Atk/Spd/Def/Res+4 to ally during combat.`,
+          prf: true,
+          type: 'sword',
+          refine: 1,
+          mt: 18,
+          hp: 3,
+          spd: 2,
+          def: 2,
+          res: 2
+        },
+        {
+          name: 'Yato(atk)',
+          description: `Grants Atk/Spd/Def/Res+2.`,
+          prf: true,
+          type: 'sword',
+          refine: 2,
+          mt: 20,
+          hp: 5,
+          spd: 2,
+          def: 2,
+          res: 2
+        },
+        {
+          name: 'Yato(spd)',
+          description: `Grants Atk/Spd/Def/Res+2.`,
+          prf: true,
+          type: 'sword',
+          refine: 3,
+          mt: 18,
+          hp: 5,
+          spd: 5,
+          def: 2,
+          res: 2
+        },
+        {
+          name: 'Yato(def)',
+          description: `Grants Atk/Spd/Def/Res+2.`,
+          prf: true,
+          type: 'sword',
+          refine: 4,
+          mt: 18,
+          hp: 5,
+          spd: 2,
+          def: 6,
+          res: 2
+        },
+        {
+          name: 'Yato(res)',
+          description: `Grants Atk/Spd/Def/Res+2.`,
+          prf: true,
+          type: 'sword',
+          refine: 5,
+          mt: 18,
+          hp: 5,
+          spd: 2,
+          def: 2,
+          res: 6
+        },
+        {
+          name: 'Raijinto',
+          description: `Enables counterattack regardless of distance if this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Siegfried',
+          description: `Enables counterattack regardless of distance if this unit is attacked.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Dark Greatsword',
+          description: `Atk/Spd+4 during combat if unit initiates combat.`,
+          prf: true,
+          type: 'sword',
+          mt: 16
+        },
+        {
+          name: 'Gjoll',
+          description: `Grants Atk+3. If a penalty inflicted by a skill like Panic or Threaten and/or a negative status effect (preventing counterattack or restricted movement) is active on a foe, unit makes a guaranteed follow-up attack and foe cannot.`,
+          prf: true,
+          type: 'sword',
+          mt: 19
+        },
+        // ============== TOME(R) ============== //
+        {
+          name: 'RED TOME',
+          description: `description`,
+          type: 'red tome',
+          mt: 0
+        },
+        {
+          name: 'Fire',
+          description: ``,
+          type: 'red tome',
+          mt: 4
+        },
+        {
+          name: 'Elfire',
+          description: ``,
+          type: 'red tome',
+          mt: 6
+        },
+        {
+          name: 'Bolganone',
+          description: ``,
+          type: 'red tome',
+          mt: 9
+        },
+        {
+          name: 'Bolganone+',
+          description: ``,
+          type: 'red tome',
+          mt: 13
+        },
+        {
+          name: 'Bolganone+(atk)',
+          description: ``,
+          type: 'red tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Bolganone+(spd)',
+          description: ``,
+          type: 'red tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Bolganone+(def)',
+          description: ``,
+          type: 'red tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Bolganone+(res)',
+          description: ``,
+          type: 'red tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Flux',
+          description: ``,
+          type: 'red tome',
+          mt: 4
+        },
+        {
+          name: 'Ruin',
+          description: ``,
+          type: 'red tome',
+          mt: 6
+        },
+        {
+          name: 'Fenrir',
+          description: ``,
+          type: 'red tome',
+          mt: 9
+        },
+        {
+          name: 'Fenrir+',
+          description: ``,
+          type: 'red tome',
+          mt: 13
+        },
+        {
+          name: 'Fenrir+(atk)',
+          description: ``,
+          type: 'red tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Fenrir+(spd)',
+          description: ``,
+          type: 'red tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Fenrir+(def)',
+          description: ``,
+          type: 'red tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Fenrir+(res)',
+          description: ``,
+          type: 'red tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Candelabra',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'red tome',
+          mt: 8
+        },
+        {
+          name: 'Candelabra+',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'red tome',
+          mt: 12
+        },
+        {
+          name: 'Candelabra+(atk)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'red tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Candelabra+(spd)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'red tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Candelabra+(def)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'red tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Candelabra+(res)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'red tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Raudrwolf',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          mt: 6,
+          anti: 2
+        },
+        {
+          name: 'Raudrwolf+',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          mt: 10,
+          anti: 2
+        },
+        {
+          name: 'Keen Raudrwolf',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          mt: 18,
+          anti: 2
+        },
+        {
+          name: 'Keen Raudrwolf+',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          mt: 12,
+          anti: 2
+        },
+        {
+          name: 'Keen Raudrwolf+(eff)',
+          description: `Effective against cavalry foes.
+          If in combat against a cavalry foe, nullifies foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'red tome',
+          refine: 1,
+          mt: 12,
+          anti: 2
+        },
+        {
+          name: 'Keen Raudrwolf+(atk)',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 2
+        },
+        {
+          name: 'Keen Raudrwolf+(spd)',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 2
+        },
+        {
+          name: 'Keen Raudrwolf+(def)',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 2
+        },
+        {
+          name: 'Keen Raudrwolf+(res)',
+          description: `Effective against cavalry foes.`,
+          type: 'red tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 2
+        },
+        {
+          name: 'Raudrblade',
+          description: `Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
+          type: 'red tome',
+          mt: 9
+        },
+        {
+          name: 'Raudrblade+',
+          description: `Slows special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
+          type: 'red tome',
+          mt: 13
+        },
+        {
+          name: 'Raudrowl',
+          description: ``,
+          type: 'red tome',
+          mt: 0
+        },
+        // ============ PRF TOME(R)============= //
+        // =============== LANCE =============== //
+        // ============= PRF LANCE ============= //
+        // ============== TOME(B) ============== //
+        // ============ PRF TOME(B)============= //
+        // ================ AXE ================ //
+        // ============== PRF AXE ============== //
+        // ============== TOME(G) ============== //
+        // ============ PRF TOME(G)============= //
+        // ============== BREATH =============== //
+        // ============ PRF BREATH ============= //
+        // ================ BOW ================ //
+        // ============== PRF BOW ============== //
+        // ============== DAGGER =============== //
+        // ============ PRF DAGGER ============= //
+        // =============== STAFF =============== //
+        // ============= PRF STAFF ============= //
       ]);
     });
 };
@@ -1325,16 +1887,62 @@ exports.seed = function (knex, Promise) {
   name: '',
   description: ``,
   prf: true,
-  type: 'sword',
+  type: 'red tome',
   mt: 0
 },
 {
-  name: 'Eckesachs(eff)',
-  description: `Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions.`,
+  name: 'Yato',
+  description: `Grants Spd+4 during combat if unit initiates attack`,
   prf: true,
-  type: 'sword',
-  refine: 0,
+  type: 'red tome',
   mt: 16,
+},
+{
+  name: 'Yato(eff)',
+  description: `Grants Atk/Spd/Def/Res+2.`,
+  prf: true,
+  type: 'red tome',
+  refine: 1,
+  mt: 16,
+  hp: 3
+},
+{
+  name: 'Yato(atk)',
+  description: `Grants Atk/Spd/Def/Res+2.`,
+  prf: true,
+  type: 'red tome',
+  refine: 2,
+  mt: 18,
   hp: 5
+},
+{
+  name: 'Yato(spd)',
+  description: `Grants Atk/Spd/Def/Res+2.`,
+  prf: true,
+  type: 'red tome',
+  refine: 3,
+  mt: 16,
+  hp: 5,
+  spd: 3
+},
+{
+  name: 'Yato(def)',
+  description: `Grants Atk/Spd/Def/Res+2.`,
+  prf: true,
+  type: 'red tome',
+  refine: 4,
+  mt: 16,
+  hp: 5,
+  def: 4
+},
+{
+  name: 'Yato(res)',
+  description: `Grants Atk/Spd/Def/Res+2.`,
+  prf: true,
+  type: 'red tome',
+  refine: 5,
+  mt: 16,
+  hp: 5,
+  res: 4
 },
   */
