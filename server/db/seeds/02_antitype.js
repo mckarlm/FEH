@@ -48,7 +48,7 @@ Muninn's Egg(g)
 Noatun
 Hlidskjalf
 Leiptr
-Blizzard
+Blizzard (g)
 Niu
 Laevateinn
 Byleistr
@@ -56,45 +56,45 @@ Thokk
 Falchion(Archaenea)
 Exalted Falchion
 Wing Sword
-Aura
+Aura (b)
 Parthia
 Hauteclere
 Huginn's Egg (b)
-Excalibur
+Excalibur (g)
 Gradivus
 Breath of Fog
 Summer's Breath
 Divine Mist
 Reese's Tome (r)
 Falchion(Valentia)
-Sagittae
+Sagittae (b)
 Rhompaia
-Ragnarok
+Ragnarok (r)
 Beloved Zofia
 Royal Sword
 Golden Dagger
-Dark Aura
-Dark Excalibur
+Dark Aura (b)
+Dark Excalibur (g)
 Divine Tyrfing
-Valflame
+Valflame (r)
 Gae Bolg
 Ayra's Blade
-Forseti
+Forseti (g)
 Mystletainn
-Divine Naga
+Divine Naga (g)
 Tyrfing
-Book of Naga
+Book of Naga (g)
 Dark Mystletainn
-Loptous
-Mjolnir
+Loptous (r)
+Mjolnir (b)
 Light Brand
-Dire Thunder
+Dire Thunder (b)
 Meisterschwert
-Thunderhead
-Wargod's Tome
+Thunderhead (g)
+Wargod's Tome (b)
 Binding Blade
 Blazing Durandal
-Forblaze
+Forblaze (r)
 Eckesachs
 Shanna's Lance
 Axe of Virility

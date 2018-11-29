@@ -1856,11 +1856,249 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Raudrowl',
-          description: ``,
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of allies x 2.`,
+          type: 'red tome',
+          mt: 6
+        },
+        {
+          name: 'Raudrowl+',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of allies x 2.`,
+          type: 'red tome',
+          mt: 10
+        },
+        {
+          name: 'Raudrowl+(atk)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of allies x 2.`,
+          type: 'red tome',
+          refine: 2,
+          mt: 12,
+          hp: 2
+        },
+        {
+          name: 'Raudrowl+(spd)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of allies x 2.`,
+          type: 'red tome',
+          refine: 3,
+          mt: 11,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Raudrowl+(def)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of allies x 2.`,
+          type: 'red tome',
+          refine: 4,
+          mt: 11,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Raudrowl+(res)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of allies x 2.`,
+          type: 'red tome',
+          refine: 5,
+          mt: 11,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Raudrraven',
+          description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
+          type: 'red tome',
+          mt: 7
+        },
+        {
+          name: 'Raudrraven+',
+          description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
+          type: 'red tome',
+          mt: 11
+        },
+        {
+          name: 'Tomato Tome',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'red tome',
+          mt: 8
+        },
+        {
+          name: 'Tomato Tome+',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'red tome',
+          mt: 12
+        },
+        {
+          name: 'Tomato Tome+(atk)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'red tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Tomato Tome+(spd)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'red tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Tomato Tome+(def)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'red tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Tomato Tome+(res)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'red tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        // ============ PRF TOME(R)============= //
+        {
+          name: 'PRF RED TOME',
+          description: `description`,
+          prf: true,
+          type: 'RED TOME',
+          mt: 0
+        },
+        {
+          name: 'Reese\'s Tome',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14
+        },
+        {
+          name: 'Reese\'s Tome(eff)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.
+          At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd/Res-4 until the end of foe\'s next action.`,
+          prf: true,
+          type: 'red tome',
+          refine: 1
+          mt: 14
+        },
+        {
+          name: 'Reese\'s Tome(atk)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'red tome',
+          refine: 2
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Reese\'s Tome(spd)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'red tome',
+          refine: 3
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Reese\'s Tome(def)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'red tome',
+          refine: 4
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Reese\'s Tome(res)',
+          description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'red tome',
+          refine: 5
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Ragnarok',
+          description: `If unit has 100% HP at the start of combat, unit receives Atk/Spd+5. If unit initiated combat, unit will receive 5 damage after combat.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14
+        },
+        {
+          name: 'Ragnarok(eff)',
+          description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.
+          If unit\'s HP ≤ 80% at the start of combat, Atk/Spd+7 during combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 1
+          mt: 14
+        },
+        {
+          name: 'Ragnarok(atk)',
+          description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 2
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Ragnarok(spd)',
+          description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 3
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Ragnarok(def)',
+          description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 4
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Ragnarok(res)',
+          description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 5
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Valflame',
+          description: `At start of turn, all foes in cardinal direction with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe\'s next turn.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14
+        },
+        {
+          name: 'Loptous',
+          description: `Grants Res+3. Skills with \"effective against dragons\" are effective against unit. If foe has no skills with \"effective against dragons,\" inflicts Atk-6 on foe during combat.`,
+          prf: true,
           type: 'red tome',
           mt: 0
         },
-        // ============ PRF TOME(R)============= //
+        {
+          name: 'Forblaze',
+          description: ``,
+          prf: true,
+          type: 'red tome',
+          mt: 0
+        },
         // =============== LANCE =============== //
         // ============= PRF LANCE ============= //
         // ============== TOME(B) ============== //
