@@ -44,7 +44,7 @@ exports.seed = function(knex, Promise) {
 /*
 Folkvangr
 Fensalir
-Muninn's Egg(g)
+Muninn's Egg (g)
 Noatun
 Hlidskjalf
 Leiptr
@@ -113,54 +113,54 @@ Florina's Lance
 Vassal's Blade
 Regal Blade
 Deathly Dagger
-Giga Excalibur
+Giga Excalibur (g)
 Sieglinde
-Gleipnir
+Gleipnir (r)
 Storm Sieglinde
 Siegmund
 Flame Siegmund
 Garm
-Weirding Tome
+Weirding Tome (b)
 Nidhogg
 Vidofnir
-Fruit of Idunn
-Naglfar
+Fruit of Idunn (r)
+Naglfar (r)
 Cursed Lance
 Audhulma
-Ivaldi
+Ivaldi (b)
 Great Flame
 Spirit Breath
 Ragnell
 Urvan
 Draconic Poleax
-Wind's Brand
+Wind's Brand (g)
 Resolute Blade
 Amiti
 Dauntless Lance
-Nifl Frostflowers
+Nifl Frostflowers (b)
 Alondite
-Thani
-Dawn Suzu
+Thani (b)
+Dawn Suzu (r)
 Peshkatz
-Cymbeline
+Cymbeline (r)
 Falchion(Awakening)
 Sealed Falchion
 Expiration
 Solitary Blade
 Skuld
-Muspell Fireposy
-Aversa's Night
+Muspell Fireposy (r)
+Aversa's Night (r)
 Wolf Berg
 Cherche's Axe
-Grimoire
+Grimoire (r)
 Geirskogul
 Thogn
 Missiletainn(Dark)
-Grima's Truth
+Grima's Truth (r)
 Yato
 Draconic Rage
 Urdr
-Book of Shadows
+Book of Shadows (g)
 Felicia's Plate
 Raijinto
 Hinoka's Spear
@@ -170,13 +170,32 @@ Skadi
 Breath of Blight
 Siegfried
 Camilla's Axe
-Book of Dreams
-Brynhildr
-Odin's Grimoire
+Book of Dreams (r)
+Brynhildr (r)
+Odin's Grimoire (b)
 Hoarfrost Knife
 Bright Naginata
 Dark Greatsword
-Missiletainn(Dusk)
+Missiletainn(Dusk) (b)
 
-Gjoll Sylgr Sinmara Imhullu
+Gjoll
+Sylgr
+Sinmara
+Imhullu (r)
+
+iron/steel/silver
+killer/slaying LANCE
+heavy/slaying SPEAR
+ridersbane
+berkut's lance
+brave lance
+carrot lance
+casa blanca
+deft harpoon
+firesweep l
+first bite
+harmonic lance
+reprisal lance
+shell lance
+tannenboom
 */

@@ -7,11 +7,6 @@ exports.seed = function (knex, Promise) {
       return knex('skills').insert([
         // =============== SWORD =============== //
         {
-          name: 'SWORD',
-          description: 'description',
-          type: 'sword'
-        },
-        {
           name: 'Iron Sword',
           description: ``,
           type: 'sword',
@@ -496,13 +491,6 @@ exports.seed = function (knex, Promise) {
           res: 4
         },
         // ============= PRF SWORD ============= //
-        {
-          name: 'PRF SWORD',
-          description: `description`,
-          prf: true,
-          type: 'sword',
-          mt: 0
-        },
         {
           name: 'Folkvangr',
           description: `At start of turn, if unit\'s HP ≤ 50%, grants Atk+5 for 1 turn.`,
@@ -1596,12 +1584,6 @@ exports.seed = function (knex, Promise) {
         },
         // ============== TOME(R) ============== //
         {
-          name: 'RED TOME',
-          description: `description`,
-          type: 'red tome',
-          mt: 0
-        },
-        {
           name: 'Fire',
           description: ``,
           type: 'red tome',
@@ -1962,13 +1944,6 @@ exports.seed = function (knex, Promise) {
         },
         // ============ PRF TOME(R)============= //
         {
-          name: 'PRF RED TOME',
-          description: `description`,
-          prf: true,
-          type: 'RED TOME',
-          mt: 0
-        },
-        {
           name: 'Reese\'s Tome',
           description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
           prf: true,
@@ -1981,7 +1956,7 @@ exports.seed = function (knex, Promise) {
           At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd/Res-4 until the end of foe\'s next action.`,
           prf: true,
           type: 'red tome',
-          refine: 1
+          refine: 1,
           mt: 14
         },
         {
@@ -1989,7 +1964,7 @@ exports.seed = function (knex, Promise) {
           description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
           prf: true,
           type: 'red tome',
-          refine: 2
+          refine: 2,
           mt: 15,
           hp: 2
         },
@@ -1998,7 +1973,7 @@ exports.seed = function (knex, Promise) {
           description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
           prf: true,
           type: 'red tome',
-          refine: 3
+          refine: 3,
           mt: 14,
           hp: 2,
           spd: 2
@@ -2008,7 +1983,7 @@ exports.seed = function (knex, Promise) {
           description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
           prf: true,
           type: 'red tome',
-          refine: 4
+          refine: 4,
           mt: 14,
           hp: 2,
           def: 3
@@ -2018,7 +1993,7 @@ exports.seed = function (knex, Promise) {
           description: `During combat, unit\'s Atk/Spd/Def/Res boosted by number of adjacent allies x 2.`,
           prf: true,
           type: 'red tome',
-          refine: 5
+          refine: 5,
           mt: 14,
           hp: 2,
           res: 3
@@ -2036,7 +2011,7 @@ exports.seed = function (knex, Promise) {
           If unit\'s HP ≤ 80% at the start of combat, Atk/Spd+7 during combat.`,
           prf: true,
           type: 'red tome',
-          refine: 1
+          refine: 1,
           mt: 14
         },
         {
@@ -2044,7 +2019,7 @@ exports.seed = function (knex, Promise) {
           description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
           prf: true,
           type: 'red tome',
-          refine: 2
+          refine: 2,
           mt: 15,
           hp: 2
         },
@@ -2053,7 +2028,7 @@ exports.seed = function (knex, Promise) {
           description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
           prf: true,
           type: 'red tome',
-          refine: 3
+          refine: 3,
           mt: 14,
           hp: 2,
           spd: 2
@@ -2063,7 +2038,7 @@ exports.seed = function (knex, Promise) {
           description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
           prf: true,
           type: 'red tome',
-          refine: 4
+          refine: 4,
           mt: 14,
           hp: 2,
           def: 3
@@ -2073,7 +2048,7 @@ exports.seed = function (knex, Promise) {
           description: `Grants Atk/Spd+5 during combat. If unit initiated combat, unit will receive 5 damage after combat.`,
           prf: true,
           type: 'red tome',
-          refine: 5
+          refine: 5,
           mt: 14,
           hp: 2,
           res: 3
@@ -2094,12 +2069,960 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Forblaze',
-          description: ``,
+          description: `At the start of each turn, inflicts Res-6 on foe on the enemy team with the highest Res through its next action.`,
           prf: true,
           type: 'red tome',
-          mt: 0
+          mt: 14
+        },
+        {
+          name: 'Forblaze(eff)',
+          description: `At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.
+          Grants Atk+6 during combat if unit initiates the attack.`,
+          prf: true,
+          type: 'red tome',
+          refine: 1,
+          mt: 14
+        },
+        {
+          name: 'Forblaze(atk)',
+          description: `At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.`,
+          prf: true,
+          type: 'red tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Forblaze(spd)',
+          description: `At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.`,
+          prf: true,
+          type: 'red tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Forblaze(def)',
+          description: `At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.`,
+          prf: true,
+          type: 'red tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Forblaze(res)',
+          description: `At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.`,
+          prf: true,
+          type: 'red tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Gleipnir',
+          description: `Grants Res+3. If foe\'s HP = 100% at start of combat, grants Atk/Spd+3 during combat.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14,
+          res: 3
+        },
+        {
+          name: 'Fruit of Idunn',
+          description: `Grants Spd+3. If unit has HP ≥ 50%, allies within 2 spaces can move to a space adjacent to unit.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14,
+          spd: 3
+        },
+        {
+          name: 'Naglfar',
+          description: `Grants weapon advantage vs. colorless foes.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14,
+        },
+        {
+          name: 'Dawn Suzu',
+          description: `Grants Atk+3. Disables unit\'s and foe\'s skills that change attack priority.`,
+          prf: true,
+          type: 'red tome',
+          mt: 17,
+          anti: 7
+        },
+        {
+          name: 'Fruit of Idunn',
+          description: `Grants Spd+3. If unit has HP ≥ 50%, allies within 2 spaces can move to a space adjacent to unit.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14
+        },
+        {
+          name: 'Cymbeline',
+          description: `Grants adjacent allies Atk+4 through their next action after any combat this unit initiates.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14
+        },
+        {
+          name: 'Cymbeline(eff)',
+          description: `Grants allies within 2 spaces Atk+3 during combat.
+          Grants Atk/Res+5 during combat if within 2 spaces of a flying ally.`,
+          prf: true,
+          type: 'red tome',
+          refine: 1,
+          mt: 14,
+        },
+        {
+          name: 'Cymbeline(atk)',
+          description: `Grants allies within 2 spaces Atk+3 during combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Cymbeline(spd)',
+          description: `Grants allies within 2 spaces Atk+3 during combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Cymbeline(def)',
+          description: `Grants allies within 2 spaces Atk+3 during combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Cymbeline(res)',
+          description: `Grants allies within 2 spaces Atk+3 during combat.`,
+          prf: true,
+          type: 'red tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Muspell Fireposy',
+          description: `Grants Spd+3. During combat, unit\'s Atk/Spd boosted by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14,
+          spd: 3
+        },
+        {
+          name: 'Aversa\'s Night',
+          description: `Grants Res+3. If any foe\'s HP ≤ unit\'s HP -3 and that foe is adjacent to another foe, inflicts Atk/Spd/Def/Res-3 on that foe and bonuses on that foe become penalties through that foe\'s next action.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14,
+          res: 3
+        },
+        {
+          name: 'Grimoire',
+          description: `If unit has ≥ 50% HP, unit can move to a space adjacent to any ally within 2 spaces.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14
+        },
+        {
+          name: 'Grima\'s Truth',
+          description: `Grants Def+3. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within two spaces of target through their next actions and grants Atk/Spd+5 to unit and allies within two spaces of unit for 1 turn.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14,
+          def: 3
+        },
+        {
+          name: 'Book of Dreams',
+          description: `Grants Atk+3. If unit is adjacent to ally, inflicts Atk/Spd/Def/Res-4 on foe during combat.`,
+          prf: true,
+          type: 'red tome',
+          mt: 17
+        },
+        {
+          name: 'Brynhildr',
+          description: `If unit initiates attack, restricts foe\'s next turn movement to 1 space or less.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14
+        },
+        {
+          name: 'Brynhildr(eff)',
+          description: `If in combat against magic foe, reduces damage from foe\'s first attack by 30%.
+          If foe uses bow, dagger, magic, or staff and unit\'s Def ≥ foe\'s Def+1, foe cannot make a follow-up attack.`,
+          prf: true,
+          type: 'red tome',
+          refine: 1,
+          mt: 14
+        },
+        {
+          name: 'Brynhildr(atk)',
+          description: `If in combat against magic foe, reduces damage from foe\'s first attack by 30%.`,
+          prf: true,
+          type: 'red tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Brynhildr(spd)',
+          description: `If in combat against magic foe, reduces damage from foe\'s first attack by 30%.`,
+          prf: true,
+          type: 'red tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Brynhildr(def)',
+          description: `If in combat against magic foe, reduces damage from foe\'s first attack by 30%.`,
+          prf: true,
+          type: 'red tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Brynhildr(res)',
+          description: `If in combat against magic foe, reduces damage from foe\'s first attack by 30%.`,
+          prf: true,
+          type: 'red tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Imhullu',
+          description: `Grants Res+3. At the start of turn 3, deals 5 damage to non-magic foes within 5 columns centered on unit, and inflicts status on those foes preventing counterattack through their next actions.`,
+          prf: true,
+          type: 'red tome',
+          mt: 14,
+          res: 3
         },
         // =============== LANCE =============== //
+        {
+          name: 'Iron Lance',
+          description: ``,
+          type: 'lance',
+          mt: 6
+        },
+        {
+          name: 'Steel Lance',
+          description: ``,
+          type: 'lance',
+          mt: 8
+        },
+        {
+          name: 'Silver Lance',
+          description: ``,
+          type: 'lance',
+          mt: 11
+        },
+        {
+          name: 'Silver Lance+',
+          description: ``,
+          type: 'lance',
+          mt: 15
+        },
+        {
+          name: 'Silver Lance+(atk)',
+          description: ``,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Silver Lance+(spd)',
+          description: ``,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Silver Lance+(def)',
+          description: ``,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Silver Lance+(res)',
+          description: ``,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Killer Lance',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          mt: 7
+        },
+        {
+          name: 'Killer Lance+',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          mt: 11
+        },
+        {
+          name: 'Slaying Lance',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'Slaying Lance+',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'Slaying Lance+(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Slaying Lance+(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Slaying Lance+(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Slaying Lance+(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Heavy Spear',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          mt: 8,
+          anti: 4
+        },
+        {
+          name: 'Heavy Spear+',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          mt: 12,
+          anti: 4
+        },
+        {
+          name: 'Slaying Spear',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          mt: 10,
+          anti: 4
+        },
+        {
+          name: 'Slaying Spear+',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          mt: 14,
+          anti: 4
+        },
+        {
+          name: 'Slaying Spear+(eff)',
+          description: `Effective against armored foes.
+          If in combat against an armored foe, nullifies foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 4
+        },
+        {
+          name: 'Slaying Spear+(atk)',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5,
+          anti: 4
+        },
+        {
+          name: 'Slaying Spear+(spd)',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3,
+          anti: 4
+        },
+        {
+          name: 'Slaying Spear+(def)',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4,
+          anti: 4
+        },
+        {
+          name: 'Slaying Spear+(res)',
+          description: `Effective against armored foes.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4,
+          anti: 4
+        },
+        {
+          name: 'Ridersbane',
+          description: `Effective against cavalry foes.`,
+          type: 'lance',
+          mt: 10,
+          anti: 2
+        },
+        {
+          name: 'Ridersbane+',
+          description: `Effective against cavalry foes.`,
+          type: 'lance',
+          mt: 14,
+          anti: 2
+        },
+        {
+          name: 'Ridersbane+(eff)',
+          description: `Effective against cavalry foes.
+          If in combat against an cavalry foe, nullifies foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 2
+        },
+        {
+          name: 'Ridersbane+(atk)',
+          description: `Effective against cavalry foes.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5,
+          anti: 2
+        },
+        {
+          name: 'Ridersbane+(spd)',
+          description: `Effective against cavalry foes.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3,
+          anti: 2
+        },
+        {
+          name: 'Ridersbane+(def)',
+          description: `Effective against cavalry foes.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4,
+          anti: 2
+        },
+        {
+          name: 'Ridersbane+(res)',
+          description: `Effective against cavalry foes.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4,
+          anti: 2
+        },
+        {
+          name: 'Berkut\'s Lance',
+          description: `Grants Res+4 when the unit is under attack.`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'Berkut\'s Lance+',
+          description: `Grants Res+4 when the unit is under attack.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'Berkut\'s Lance+(atk)',
+          description: `Grants Res+7 when the unit is under attack.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Berkut\'s Lance+(spd)',
+          description: `Grants Res+7 when the unit is under attack.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Berkut\'s Lance+(def)',
+          description: `Grants Res+7 when the unit is under attack.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Berkut\'s Lance+(res)',
+          description: `Grants Res+7 when the unit is under attack.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Brave Lance',
+          description: `Spd-5. Attack twice when initiating combat.`,
+          type: 'lance',
+          mt: 5,
+          spd: -5
+        },
+        {
+          name: 'Brave Lance+',
+          description: `Spd-5. Attack twice when initiating combat.`,
+          type: 'lance',
+          mt: 8
+        },
+        {
+          name: 'Casa Blanca',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'Casa Blanca+',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'Casa Blanca+(atk)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Casa Blanca+(spd)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Casa Blanca+(def)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Casa Blanca+(res)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Carrot Lance',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'lance',
+          mt: 9
+        },
+        {
+          name: 'Carrot Lance+',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'lance',
+          mt: 13
+        },
+        {
+          name: 'Carrot Lance+(atk)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'lance',
+          refine: 2,
+          mt: 15,
+          hp: 5
+        },
+        {
+          name: 'Carrot Lance+(spd)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'lance',
+          refine: 3,
+          mt: 13,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Carrot Lance+(def)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'lance',
+          refine: 4,
+          mt: 13,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Carrot Lance+(res)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'lance',
+          refine: 5,
+          mt: 13,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Deft Harpoon',
+          description: `If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'Deft Harpoon+',
+          description: `If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'Deft Harpoon+(atk)',
+          description: `If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Deft Harpoon+(spd)',
+          description: `If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Deft Harpoon+(def)',
+          description: `If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Deft Harpoon+(res)',
+          description: `If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Firesweep Lance',
+          description: `Unit and enemies cannot counterattack.`,
+          type: 'lance',
+          mt: 11
+        },
+        {
+          name: 'Firesweep Lance+',
+          description: `Unit and enemies cannot counterattack.`,
+          type: 'lance',
+          mt: 15
+        },
+        {
+          name: 'First Bite',
+          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'First Bite+',
+          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'First Bite+(atk)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'First Bite+(spd)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'First Bite+(def)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'First Bite+(res)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Harmonic Lance',
+          description: `Grants +10 to damage when Special triggers.`,
+          type: 'lance',
+          mt: 9
+        },
+        {
+          name: 'Harmonic Lance+',
+          description: `Grants +10 to damage when Special triggers.`,
+          type: 'lance',
+          mt: 13
+        },
+        {
+          name: 'Harmonic Lance+(atk)',
+          description: `Grants +10 to damage when Special triggers.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Harmonic Lance+(spd)',
+          description: `Grants +10 to damage when Special triggers.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Harmonic Lance+(def)',
+          description: `Grants +10 to damage when Special triggers.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Harmonic Lance+(res)',
+          description: `Grants +10 to damage when Special triggers.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Reprisal Lance',
+          description: `If foe initiates combat, grants Atk+6 during combat.`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'Reprisal Lance+',
+          description: `If foe initiates combat, grants Atk+6 during combat.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'Reprisal Lance+(atk)',
+          description: `If foe initiates combat, grants Atk+6 during combat.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Reprisal Lance+(spd)',
+          description: `If foe initiates combat, grants Atk+6 during combat.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Reprisal Lance+(def)',
+          description: `If foe initiates combat, grants Atk+6 during combat.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Reprisal Lance+(res)',
+          description: `If foe initiates combat, grants Atk+6 during combat.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Shell Lance',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'Shell Lance+',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'Shell Lance+(atk)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Shell Lance+(spd)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Shell Lance+(def)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Shell Lance+(res)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Tannenboom!',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'lance',
+          mt: 10
+        },
+        {
+          name: 'Tannenboom!+',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
+          name: 'Tannenboom!+(atk)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'lance',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Tannenboom!+(spd)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'lance',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Tannenboom!+(def)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'lance',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Tannenboom!+(res)',
+          description: `Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.`,
+          type: 'lance',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
         // ============= PRF LANCE ============= //
         // ============== TOME(B) ============== //
         // ============ PRF TOME(B)============= //
@@ -2125,7 +3048,7 @@ exports.seed = function (knex, Promise) {
   name: '',
   description: ``,
   prf: true,
-  type: 'red tome',
+  type: 'lance',
   mt: 0
 },
 {
