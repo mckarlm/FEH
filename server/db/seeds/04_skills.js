@@ -3930,28 +3930,28 @@ exports.seed = function (knex, Promise) {
           res: 3
         },
         {
-          name: 'Blessed Bouquet',
-          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          name: 'Blarserpent',
+          description: `If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
           type: 'blue tome',
           mt: 8
         },
         {
-          name: 'Blessed Bouquet+',
-          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          name: 'Blarserpent+',
+          description: `If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
           type: 'blue tome',
           mt: 12
         },
         {
-          name: 'Blessed Bouquet+(atk)',
-          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          name: 'Blarserpent+(atk)',
+          description: `If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
           type: 'blue tome',
           refine: 2,
           mt: 13,
           hp: 2
         },
         {
-          name: 'Blessed Bouquet+(spd)',
-          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          name: 'Blarserpent+(spd)',
+          description: `If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
           type: 'blue tome',
           refine: 3,
           mt: 12,
@@ -3959,8 +3959,8 @@ exports.seed = function (knex, Promise) {
           spd: 2
         },
         {
-          name: 'Blessed Bouquet+(def)',
-          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          name: 'Blarserpent+(def)',
+          description: `If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
           type: 'blue tome',
           refine: 4,
           mt: 12,
@@ -3968,8 +3968,227 @@ exports.seed = function (knex, Promise) {
           def: 3
         },
         {
-          name: 'Blessed Bouquet+(res)',
-          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          name: 'Blarserpent+(res)',
+          description: `If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Blarwolf',
+          description: `Effective against cavalry foes.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 6,
+          anti: 2
+        },
+        {
+          name: 'Blarwolf+',
+          description: `Effective against cavalry foes.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 10,
+          anti: 2
+        },
+        {
+          name: 'Keen Blarwolf',
+          description: `Effective against cavalry foes.`,
+          type: 'blue tome',
+          mt: 8,
+          anti: 2
+        },
+        {
+          name: 'Keen Blarwolf+',
+          description: `Effective against cavalry foes.`,
+          type: 'blue tome',
+          mt: 12,
+          anti: 2
+        },
+        {
+          name: 'Keen Blarwolf+(eff)',
+          description: `Effective against cavalry foes.
+          If in combat against cavalry foe, nullifies foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'blue tome',
+          refine: 1,
+          mt: 12,
+          anti: 2
+        },
+        {
+          name: 'Keen Blarwolf+(atk)',
+          description: `Effective against cavalry foes.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 2
+        },
+        {
+          name: 'Keen Blarwolf+(spd)',
+          description: `Effective against cavalry foes.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 2
+        },
+        {
+          name: 'Keen Blarwolf+(def)',
+          description: `Effective against cavalry foes.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 2
+        },
+        {
+          name: 'Keen Blarwolf+(res)',
+          description: `Effective against cavalry foes.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 2
+        },
+        {
+          name: 'Fresh Bouquet',
+          description: `At start of turn, if unit is adjacent to ally, grants Spd+4 to unit and adjacent allies for 1 turn.`,
+          type: 'blue tome',
+          mt: 8
+        },
+        {
+          name: 'Fresh Bouquet+',
+          description: `At start of turn, if unit is adjacent to ally, grants Spd+4 to unit and adjacent allies for 1 turn.`,
+          type: 'blue tome',
+          mt: 12
+        },
+        {
+          name: 'Fresh Bouquet+(atk)',
+          description: `At start of turn, if unit is adjacent to ally, grants Spd+4 to unit and adjacent allies for 1 turn.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Fresh Bouquet+(spd)',
+          description: `At start of turn, if unit is adjacent to ally, grants Spd+4 to unit and adjacent allies for 1 turn.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Fresh Bouquet+(def)',
+          description: `At start of turn, if unit is adjacent to ally, grants Spd+4 to unit and adjacent allies for 1 turn.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Fresh Bouquet+(res)',
+          description: `At start of turn, if unit is adjacent to ally, grants Spd+4 to unit and adjacent allies for 1 turn.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Juicy Wave',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
+          type: 'blue tome',
+          mt: 8
+        },
+        {
+          name: 'Juicy Wave+',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
+          type: 'blue tome',
+          mt: 12
+        },
+        {
+          name: 'Juicy Wave+(atk)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Juicy Wave+(spd)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Juicy Wave+(def)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Juicy Wave+(res)',
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Sealife Tome',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'blue tome',
+          mt: 8
+        },
+        {
+          name: 'Sealife Tome+',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'blue tome',
+          mt: 12
+        },
+        {
+          name: 'Sealife Tome+(atk)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Sealife Tome+(spd)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Sealife Tome+(def)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Sealife Tome+(res)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
           type: 'blue tome',
           refine: 5,
           mt: 12,
