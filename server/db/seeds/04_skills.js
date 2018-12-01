@@ -1484,7 +1484,7 @@ exports.seed = function (knex, Promise) {
           description: `Accelerates Special triger (cooldown count-1). Grants Special cooldown charge+1 per foe\'s attack during combat. (Does not stack. Special cooldown charge granted even if foe\'s attack deals 0 damage.`,
           prf: true,
           type: 'sword',
-          mt: 0
+          mt: 16
         },
         {
           name: 'Yato',
@@ -2065,7 +2065,7 @@ exports.seed = function (knex, Promise) {
           description: `Grants Res+3. Skills with \"effective against dragons\" are effective against unit. If foe has no skills with \"effective against dragons,\" inflicts Atk-6 on foe during combat.`,
           prf: true,
           type: 'red tome',
-          mt: 0
+          mt: 14
         },
         {
           name: 'Forblaze',
@@ -3024,7 +3024,958 @@ exports.seed = function (knex, Promise) {
           res: 4
         },
         // ============= PRF LANCE ============= //
+        {
+          name: 'Fensalir',
+          description: `Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Fensalir(eff)',
+          description: `Neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.
+          Grants Spd/Def+5 during combat if unit is adjacent to an ally.`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Fensalir(atk)',
+          description: `Neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Fensalir(spd)',
+          description: `Neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Fensalir(def)',
+          description: `Neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Fensalir(res)',
+          description: `Neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Leiptr',
+          description: `Enables counterattack regardless of distance if this unit is attacked.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Gradivus',
+          description: `Enables counterattack regardless of distance if this unit is attacked.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Rhomphaia',
+          description: `Effective against armored and cavalry foes.`,
+          prf: true,
+          type: 'lance',
+          mt: 16,
+          anti: 7
+        },
+        {
+          name: 'Rhomphaia(eff)',
+          description: `Effective against armored and cavalry foes.
+          If unit\'s Spd - foe\'s Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skills, only highest value applied.)`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 7
+        },
+        {
+          name: 'Rhomphaia(atk)',
+          description: `Effective against armored and cavalry foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5,
+          anti: 7
+        },
+        {
+          name: 'Rhomphaia(spd)',
+          description: `Effective against armored and cavalry foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          anti: 7
+        },
+        {
+          name: 'Rhomphaia(def)',
+          description: `Effective against armored and cavalry foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4,
+          anti: 7
+        },
+        {
+          name: 'Rhomphaia(res)',
+          description: `Effective against armored and cavalry foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4,
+          anti: 7
+        },
+        {
+          name: 'Gae Bolg',
+          description: `In combat against an infantry, armored, or cavalry foe, grants Atk/Def+5 during combat.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Shanna\'s Lance',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Shanna\'s Lance(eff)',
+          description: `Accelerates Special trigger (cooldown count-1).
+          Grants +10 to damage when Special triggers.`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Shanna\'s Lance(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Shanna\'s Lance(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Shanna\'s Lance(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Shanna\'s Lance(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Maltet',
+          description: `Accelerates Special trigger (cooldown count-1). If unit\'s HP ≥ 50% and foe initiates attack, unit makes a uaranteed follow-up attack.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Florina\'s Lance',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'lance',
+          mt: 16,
+          anti: 4
+        },
+        {
+          name: 'Florina\'s Lance(eff)',
+          description: `Effective against armored foes.
+          If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Atk/Spd/Def/Res+4 during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 4
+        },
+        {
+          name: 'Florina\'s Lance(atk)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5,
+          anti: 4
+        },
+        {
+          name: 'Florina\'s Lance(spd)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          anti: 4
+        },
+        {
+          name: 'Florina\'s Lance(def)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4,
+          anti: 4
+        },
+        {
+          name: 'Florina\'s Lance(res)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4,
+          anti: 4
+        },
+        {
+          name: 'Siegmund',
+          description: `Grants adjacent allies Atk+4 through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Siegmund(eff)',
+          description: `Grants adjacent allies Atk+4 through their next actions at the start of each turn.
+          If unit initiates combat and unit\'s HP ≥ 90%, unit makes a guaranteed follow-up attack.`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Siegmund(atk)',
+          description: `Grants adjacent allies Atk+4 through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Siegmund(spd)',
+          description: `Grants adjacent allies Atk+4 through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Siegmund(def)',
+          description: `Grants adjacent allies Atk+4 through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Siegmund(res)',
+          description: `Grants adjacent allies Atk+4 through their next actions at the start of each turn.`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Flame Siegmund',
+          description: `Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies (excluding unit), unit makes a guaranteed follow-up attack.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Vidofnir',
+          description: `If unit if attacked by foe using sword, lance, or axe, unit receives Def+7 during combat.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Vidofnir(eff)',
+          description: `If unit if attacked by foe using sword, lance, axe, or dragonstone, unit receives Def/Res+7 during combat.
+          If unit is within 2 spaces of infantry or armored ally, grants Atk/Spd+4 during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Vidofnir(atk)',
+          description: `If unit if attacked by foe using sword, lance, axe, or dragonstone, unit receives Def/Res+7 during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Vidofnir(spd)',
+          description: `If unit if attacked by foe using sword, lance, axe, or dragonstone, unit receives Def/Res+7 during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Vidofnir(def)',
+          description: `If unit if attacked by foe using sword, lance, axe, or dragonstone, unit receives Def/Res+7 during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Vidofnir(res)',
+          description: `If unit if attacked by foe using sword, lance, axe, or dragonstone, unit receives Def/Res+7 during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Cursed Lance',
+          description: `Accelerates Special trigger (cooldown count-1). Grants Atk/Spd+2. Deals 4 damage to unit after combat.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Dauntless Lance',
+          description: `Effective against armored foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          mt: 16,
+          anti: 4
+        },
+        {
+          name: 'Dauntless Lance(eff)',
+          description: `Effective against armored foes. Accelerates Special trigger (cooldown count-1).
+          If foe initiates combat, Spd/Def+4 during combat.`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 4
+        },
+        {
+          name: 'Dauntless Lance(atk)',
+          description: `Effective against armored foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5,
+          anti: 4
+        },
+        {
+          name: 'Dauntless Lance(spd)',
+          description: `Effective against armored foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          anti: 4
+        },
+        {
+          name: 'Dauntless Lance(def)',
+          description: `Effective against armored foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4,
+          anti: 4
+        },
+        {
+          name: 'Dauntless Lance(res)',
+          description: `Effective against armored foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4,
+          anti: 4
+        },
+        {
+          name: 'Geirskogul',
+          description: `Grants Def+3. If allies within 2 space use sword lance, axe, bow, or dagger, grants Atk/Spd+3 to those allies during combat.`,
+          prf: true,
+          type: 'lance',
+          mt: 16,
+          def: 3
+        },
+        {
+          name: 'Hinoka\'s Spear',
+          description: `Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
+        {
+          name: 'Hinoka\'s Spear(eff)',
+          description: `Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces.
+          Infantry and flying allies within 2 spaces can move to a space adjacent to unit.`,
+          prf: true,
+          type: 'lance',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Hinoka\'s Spear(atk)',
+          description: `Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces.`,
+          prf: true,
+          type: 'lance',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Hinoka\'s Spear(spd)',
+          description: `Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces.`,
+          prf: true,
+          type: 'lance',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Hinoka\'s Spear(def)',
+          description: `Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces.`,
+          prf: true,
+          type: 'lance',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Hinoka\'s Spear(res)',
+          description: `Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces.`,
+          prf: true,
+          type: 'lance',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Bright Naginata',
+          description: `Grants Atk/Def+4 during combat if foe initiates combat.`,
+          prf: true,
+          type: 'lance',
+          mt: 16
+        },
         // ============== TOME(B) ============== //
+        {
+          name: 'Thunder',
+          description: ``,
+          type: 'blue tome',
+          mt: 4
+        },
+        {
+          name: 'Elthunder',
+          description: ``,
+          type: 'blue tome',
+          mt: 6
+        },
+        {
+          name: 'Thoron',
+          description: ``,
+          type: 'blue tome',
+          mt: 9
+        },
+        {
+          name: 'Thoron+',
+          description: ``,
+          type: 'blue tome',
+          mt: 13
+        },
+        {
+          name: 'Thoron+(atk)',
+          description: ``,
+          type: 'blue tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Thoron+(spd)',
+          description: ``,
+          type: 'blue tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Thoron+(def)',
+          description: ``,
+          type: 'blue tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Thoron+(res)',
+          description: ``,
+          type: 'blue tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Light',
+          description: ``,
+          type: 'blue tome',
+          mt: 4
+        },
+        {
+          name: 'Ellight',
+          description: ``,
+          type: 'blue tome',
+          mt: 6
+        },
+        {
+          name: 'Shine',
+          description: ``,
+          type: 'blue tome',
+          mt: 9
+        },
+        {
+          name: 'Shine+',
+          description: ``,
+          type: 'blue tome',
+          mt: 13
+        },
+        {
+          name: 'Shine+(atk)',
+          description: ``,
+          type: 'blue tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Shine+(spd)',
+          description: ``,
+          type: 'blue tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Shine+(def)',
+          description: ``,
+          type: 'blue tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Shine+(res)',
+          description: ``,
+          type: 'blue tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Blarblade',
+          description: `Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 9
+        },
+        {
+          name: 'Blarblade+',
+          description: `Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 13
+        },
+        {
+          name: 'Blarowl',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'blue tome',
+          mt: 6
+        },
+        {
+          name: 'Blarowl+',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'blue tome',
+          mt: 10
+        },
+        {
+          name: 'Blarowl+(atk)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 11,
+          hp: 2
+        },
+        {
+          name: 'Blarowl+(spd)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 10,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Blarowl+(def)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 10,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Blarowl+(res)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 10,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Blarraven',
+          description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 7
+        },
+        {
+          name: 'Blarraven+',
+          description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 11
+        },
+        {
+          name: 'Blessed Bouquet',
+          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          type: 'blue tome',
+          mt: 8
+        },
+        {
+          name: 'Blessed Bouquet+',
+          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          type: 'blue tome',
+          mt: 12
+        },
+        {
+          name: 'Blessed Bouquet+(atk)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Blessed Bouquet+(spd)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Blessed Bouquet+(def)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Blessed Bouquet+(res)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Blue Egg',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'blue tome',
+          mt: 7
+        },
+        {
+          name: 'Blue Egg+',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'blue tome',
+          mt: 11
+        },
+        {
+          name: 'Blue Egg+(atk)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 12,
+          hp: 2
+        },
+        {
+          name: 'Blue Egg+(spd)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 11,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Blue Egg+(def)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 11,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Blue Egg+(res)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 11,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Blue Gift',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'blue tome',
+          mt: 8
+        },
+        {
+          name: 'Blue Gift+',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'blue tome',
+          mt: 12
+        },
+        {
+          name: 'Blue Gift+(atk)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Blue Gift+(spd)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Blue Gift+(def)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Blue Gift+(res)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Dancer\'s Score',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'blue tome',
+          mt: 8
+        },
+        {
+          name: 'Dancer\'s Score+',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'blue tome',
+          mt: 12
+        },
+        {
+          name: 'Dancer\'s Score+(atk)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Dancer\'s Score+(spd)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Dancer\'s Score+(def)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Dancer\'s Score+(res)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Blessed Bouquet',
+          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          type: 'blue tome',
+          mt: 8
+        },
+        {
+          name: 'Blessed Bouquet+',
+          description: `Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.`,
+          type: 'blue tome',
+          mt: 12
+        },
+        {
+          name: 'Blessed Bouquet+(atk)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'blue tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Blessed Bouquet+(spd)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'blue tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Blessed Bouquet+(def)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'blue tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Blessed Bouquet+(res)',
+          description: `After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'blue tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
         // ============ PRF TOME(B)============= //
         // ================ AXE ================ //
         // ============== PRF AXE ============== //
@@ -3043,67 +3994,11 @@ exports.seed = function (knex, Promise) {
 };
 
 /*
-≥≤
 {
   name: '',
   description: ``,
   prf: true,
-  type: 'lance',
+  type: 'blue tome',
   mt: 0
 },
-{
-  name: 'Yato',
-  description: `Grants Spd+4 during combat if unit initiates attack`,
-  prf: true,
-  type: 'red tome',
-  mt: 16,
-},
-{
-  name: 'Yato(eff)',
-  description: `Grants Atk/Spd/Def/Res+2.`,
-  prf: true,
-  type: 'red tome',
-  refine: 1,
-  mt: 16,
-  hp: 3
-},
-{
-  name: 'Yato(atk)',
-  description: `Grants Atk/Spd/Def/Res+2.`,
-  prf: true,
-  type: 'red tome',
-  refine: 2,
-  mt: 18,
-  hp: 5
-},
-{
-  name: 'Yato(spd)',
-  description: `Grants Atk/Spd/Def/Res+2.`,
-  prf: true,
-  type: 'red tome',
-  refine: 3,
-  mt: 16,
-  hp: 5,
-  spd: 3
-},
-{
-  name: 'Yato(def)',
-  description: `Grants Atk/Spd/Def/Res+2.`,
-  prf: true,
-  type: 'red tome',
-  refine: 4,
-  mt: 16,
-  hp: 5,
-  def: 4
-},
-{
-  name: 'Yato(res)',
-  description: `Grants Atk/Spd/Def/Res+2.`,
-  prf: true,
-  type: 'red tome',
-  refine: 5,
-  mt: 16,
-  hp: 5,
-  res: 4
-},
-  */
+*/

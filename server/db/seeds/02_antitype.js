@@ -42,6 +42,10 @@ exports.seed = function(knex, Promise) {
 };
 
 /*
+≥≤
+
+WEAPONS
+
 Folkvangr
 Fensalir
 Muninn's Egg (g)
@@ -182,20 +186,17 @@ Gjoll
 Sylgr
 Sinmara
 Imhullu (r)
+*/
 
-iron/steel/silver
-killer/slaying LANCE
-heavy/slaying SPEAR
-ridersbane
-berkut's lance
-brave lance
-carrot lance
-casa blanca
-deft harpoon
-firesweep l
-first bite
-harmonic lance
-reprisal lance
-shell lance
-tannenboom
+/*
+ASSISTS
+
+*/
+
+/*
+SPECIALS
+*/
+
+/*
+PASSIVES
 */
