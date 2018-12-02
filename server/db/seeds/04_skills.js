@@ -4196,6 +4196,145 @@ exports.seed = function (knex, Promise) {
           res: 3
         },
         // ============ PRF TOME(B)============= //
+        {
+          name: 'Aura',
+          description: `Restores 5 HP to adjacent allies after any combat this unit initiates.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14
+        },
+        {
+          name: 'Aura(eff)',
+          description: `At start of turn, grants Atk+6 to adjacent magic and staff allies for 1 turn.
+          If unit is within 2 spaces of magic or staff ally, grants Atk/Spd+5 during combat.`,
+          prf: true,
+          type: 'blue tome',
+          refine: 1,
+          mt: 14
+        },
+        {
+          name: 'Aura(atk)',
+          description: `At start of turn, grants Atk+6 to adjacent magic and staff allies for 1 turn.`,
+          prf: true,
+          type: 'blue tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Aura(spd)',
+          description: `At start of turn, grants Atk+6 to adjacent magic and staff allies for 1 turn.`,
+          prf: true,
+          type: 'blue tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Aura(def)',
+          description: `At start of turn, grants Atk+6 to adjacent magic and staff allies for 1 turn.`,
+          prf: true,
+          type: 'blue tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Aura(res)',
+          description: `At start of turn, grants Atk+6 to adjacent magic and staff allies for 1 turn.`,
+          prf: true,
+          type: 'blue tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Huginn\'s Egg',
+          description: `Grants Res+3. At start of turn if unit\'s HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through their next action.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14,
+          res: 3
+        },
+        {
+          name: 'Sagittae',
+          description: `Grants Def+3. At start of combat, if foe\'s Atk ≥ unit\'s Atk+5, grants Atk/Spd/Def/Res+5 during combat.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14,
+          def: 3
+        },
+        {
+          name: 'Dark Aura',
+          description: `At start of turn, if adjacent allies use sword, lance, axe, or dragonstone, grants Atk+6 to those allies for 1 turn.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14
+        },
+        {
+          name: 'Mjolnir',
+          description: `Accelerates Special trigger (cooldown count-1). If unit initiates combat, grants Spd+6 during combat.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14
+        },
+        {
+          name: 'Dire Thunder',
+          description: `Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 9,
+          spd: -5
+        },
+        {
+          name: 'Wargod\'s Tome',
+          description: `At start of turn, inflicts Atk/Res-4 on foes in cardinal directions with Res < unit\'s Res through their next actions.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14
+        },
+        {
+          name: 'Weirding Tome',
+          description: `Grants Spd+3. At start of turn, inflicts Spd-5 on foes in cardinal directions with Res < unit\'s Res through their next actions.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14,
+          spd: 3
+        },
+        {
+          name: 'Ivaldi',
+          description: `Grants Def+3. At start of combat, if foe\'s HP = 100%, grants Atk/Spd+3 during combat.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14,
+          def: 3
+        },
+        {
+          name: 'Thani',
+          description: `Effective against armored and cavalry foes. Grants Res+3. If armored or cavalry foe uses bow, dagger, magic, or staff, reduces damage from foe\'s first attack by 30%.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14,
+          res: 3, 
+          anti: 7
+        },
+        {
+          name: 'Odin\'s Grimoire',
+          description: `Adds total bonuses on unit to damage dealt.`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14
+        },
+        {
+          name: 'Missiletainn(Dusk)',
+          description: `Accelerates Special trigger (cooldown count-1). At the start of turn 1, grants Special cooldown count-1 to unit for each magic ally on your team (including unit).`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14
+        },
         // ================ AXE ================ //
         // ============== PRF AXE ============== //
         // ============== TOME(G) ============== //

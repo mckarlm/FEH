@@ -141,7 +141,7 @@ Wind's Brand (g)
 Resolute Blade
 Amiti
 Dauntless Lance
-Nifl Frostflowers (b)
+Nifl Frostflowers (g)
 Alondite
 Thani (b)
 Dawn Suzu (r)
