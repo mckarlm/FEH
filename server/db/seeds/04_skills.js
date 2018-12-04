@@ -216,7 +216,7 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Armorsmasher+(eff)',
           description: `Effective against armored foes.
-          Neutralizes armored foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          Neutralizes armored foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
           type: 'sword',
           mt: 14,
           hp: 3,
@@ -279,7 +279,7 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Zanbato+(eff)',
           description: `Effective against cavalry foes.
-          Neutralizes cavalry foes\' bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          Neutralizes cavalry foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
           type: 'sword',
           mt: 14,
           hp: 3,
@@ -2377,6 +2377,18 @@ exports.seed = function (knex, Promise) {
           res: 4
         },
         {
+          name: 'Sapphire Lance',
+          description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
+          type: 'lance',
+          mt: 8
+        },
+        {
+          name: 'Sapphire Lance+',
+          description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
+          type: 'lance',
+          mt: 14
+        },
+        {
           name: 'Killer Lance',
           description: `Accelerates Special trigger (cooldown count-1).`,
           type: 'lance',
@@ -2684,13 +2696,13 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Carrot Lance',
-          description: `After combat, if unit attacked, restores 4 HP.`,
+          description: `If unit initiates combat, restores 4 HP after combat.`,
           type: 'lance',
           mt: 9
         },
         {
           name: 'Carrot Lance+',
-          description: `After combat, if unit attacked, restores 4 HP.`,
+          description: `If unit initiates combat, restores 4 HP after combat.`,
           type: 'lance',
           mt: 13
         },
@@ -3669,14 +3681,12 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Blarblade',
           description: `Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
-          prf: true,
           type: 'blue tome',
           mt: 9
         },
         {
           name: 'Blarblade+',
           description: `Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
-          prf: true,
           type: 'blue tome',
           mt: 13
         },
@@ -3730,14 +3740,12 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Blarraven',
           description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
-          prf: true,
           type: 'blue tome',
           mt: 7
         },
         {
           name: 'Blarraven+',
           description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
-          prf: true,
           type: 'blue tome',
           mt: 11
         },
@@ -3979,7 +3987,6 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Blarwolf',
           description: `Effective against cavalry foes.`,
-          prf: true,
           type: 'blue tome',
           mt: 6,
           anti: 2
@@ -3987,7 +3994,6 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Blarwolf+',
           description: `Effective against cavalry foes.`,
-          prf: true,
           type: 'blue tome',
           mt: 10,
           anti: 2
@@ -4336,7 +4342,911 @@ exports.seed = function (knex, Promise) {
           mt: 14
         },
         // ================ AXE ================ //
+        {
+          name: 'Iron Axe',
+          description: ``,
+          type: 'axe',
+          mt: 6
+        },
+        {
+          name: 'Steel Axe',
+          description: ``,
+          type: 'axe',
+          mt: 8
+        },
+        {
+          name: 'Silver Axe',
+          description: ``,
+          type: 'axe',
+          mt: 11
+        },
+        {
+          name: 'Silver Axe+',
+          description: ``,
+          type: 'axe',
+          mt: 15,
+        },
+        {
+          name: 'Silver Axe+(atk)',
+          description: ``,
+          type: 'axe',
+          mt: 18,
+          hp: 5,
+          refine: 2
+        },
+        {
+          name: 'Silver Axe+(spd)',
+          description: ``,
+          type: 'axe',
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          refine: 3
+        },
+        {
+          name: 'Silver Axe+(def)',
+          description: ``,
+          type: 'axe',
+          mt: 16,
+          hp: 5,
+          def: 4,
+          refine: 4
+        },
+        {
+          name: 'Silver Axe+(res)',
+          description: ``,
+          type: 'axe',
+          mt: 16,
+          hp: 5,
+          res: 4,
+          refine: 5
+        },
+        {
+          name: 'Brave Axe',
+          description: `Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
+          type: 'axe',
+          mt: 5,
+          spd: -5
+        },
+        {
+          name: 'Brave Axe+',
+          description: `Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
+          type: 'axe',
+          mt: 8,
+          spd: -5
+        },
+        {
+          name: 'Ardent Service',
+          description: `At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Ardent Service+',
+          description: `At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Ardent Service+(atk)',
+          description: `At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Ardent Service+(spd)',
+          description: `At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Ardent Service+(def)',
+          description: `At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Ardent Service+(res)',
+          description: `At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Beach Banner',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Beach Banner+',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Beach Banner+(atk)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Beach Banner+(spd)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Beach Banner+(def)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Beach Banner+(res)',
+          description: `If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Carrot Axe',
+          description: `If unit initiates combat, restores 4 HP after combat.`,
+          type: 'axe',
+          mt: 9
+        },
+        {
+          name: 'Carrot Axe+',
+          description: `If unit initiates combat, restores 4 HP after combat.`,
+          type: 'axe',
+          mt: 13
+        },
+        {
+          name: 'Carrot Axe+(atk)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Carrot Axe+(spd)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Carrot Axe+(def)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Carrot Axe+(res)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Emerald Axe',
+          description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
+          type: 'axe',
+          mt: 8
+        },
+        {
+          name: 'Emerald Axe+',
+          description: `If unit has weapon-triangle advantage, boosts attack by 20%. If unit has weapon-triangle disadvantage, reduces attack by 20%.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Giant Spoon',
+          description: `Deals +10 damage when Special triggers.`,
+          type: 'axe',
+          mt: 9
+        },
+        {
+          name: 'Giant Spoon+',
+          description: `Deals +10 damage when Special triggers.`,
+          type: 'axe',
+          mt: 13
+        },
+        {
+          name: 'Giant Spoon+(atk)',
+          description: `Deals +10 damage when special triggers.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Giant Spoon+(spd)',
+          description: `Deals +10 damage when special triggers.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Giant Spoon+(def)',
+          description: `Deals +10 damage when special triggers.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Giant Spoon+(res)',
+          description: `Deals +10 damage when special triggers.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Hack-o\'-Lantern',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Hack-o\'-Lantern+',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Hack-o\'-Lantern+(atk)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Hack-o\'-Lantern+(spd)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Hack-o\'-Lantern+(def)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Hack-o\'-Lantern+(res)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Hagoita',
+          description: `Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Hagoita+',
+          description: `Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Hagoita+(atk)',
+          description: `Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Hagoita+(spd)',
+          description: `Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Hagoita+(def)',
+          description: `Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Hagoita+(res)',
+          description: `Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Hammer',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          mt: 8,
+          anti: 4
+        },
+        {
+          name: 'Hammer+',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          mt: 12,
+          anti: 4
+        },
+        {
+          name: 'Slaying Hammer',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          mt: 10,
+          anti: 4
+        },
+        {
+          name: 'Slaying Hammer+',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          mt: 14,
+          anti: 4
+        },
+        {
+          name: 'Slaying Hammer+(eff)',
+          description: `Effective against armored foes.
+          Neutralizes armored foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'axe',
+          refine: 1,
+          mt: 14,
+          hp: 3,
+          anti: 4
+        },
+        {
+          name: 'Slaying Hammer+(atk)',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5,
+          anti: 4
+        },
+        {
+          name: 'Slaying Hammer+(spd)',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3,
+          anti: 4
+        },
+        {
+          name: 'Slaying Hammer+(def)',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4,
+          anti: 4
+        },
+        {
+          name: 'Slaying Hammer+(res)',
+          description: `Effective against armored foes.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4,
+          anti: 4
+        },
+        {
+          name: 'Handbell',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Handbell+',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Handbell+(atk)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Handbell+(spd)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Handbell+(def)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Handbell+(res)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Killer Axe',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          mt: 8
+        },
+        {
+          name: 'Killer Axe+',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          mt: 12
+        },
+        {
+          name: 'Slaying Axe',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Slaying Axe+',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Slaying Axe+(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Slaying Axe+(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Slaying Axe+(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Slaying Axe+(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Legion\'s Axe',
+          description: `After combat, if unit attacked, converts bonuses on foe into penalties through its next action.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Legion\'s Axe+',
+          description: `After combat, if unit attacked, converts bonuses on foe into penalties through its next action.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Legion\'s Axe+(atk)',
+          description: `After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through its next action.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Legion\'s Axe+(spd)',
+          description: `After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through its next action.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Legion\'s Axe+(def)',
+          description: `After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through its next action.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Legion\'s Axe+(res)',
+          description: `After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through its next action.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Lilith Floatie',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Lilith Floatie+',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Lilith Floatie+(atk)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Lilith Floatie+(spd)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Lilith Floatie+(def)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Lilith Floatie+(res)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Melon Crusher',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Melon Crusher+',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Melon Crusher+(atk)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Melon Crusher+(spd)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Melon Crusher+(def)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Melon Crusher+(res)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Poleaxe',
+          description: `Effective against cavalry foes.`,
+          type: 'axe',
+          mt: 10,
+          anti: 2
+        },
+        {
+          name: 'Poleaxe+',
+          description: `Effective against cavalry foes.`,
+          type: 'axe',
+          mt: 14,
+          anti: 2
+        },
+        {
+          name: 'Poleaxe+(eff)',
+          description: `Effective against cavalry foes.
+          Neutralizes cavalr foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'axe',
+          refine: 1,
+          mt: 14,
+          hp: 3,
+          anti: 2
+        },
+        {
+          name: 'Poleaxe+(atk)',
+          description: `Effective against cavalry foes.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5,
+          anti: 2
+        },
+        {
+          name: 'Poleaxe+(spd)',
+          description: `Effective against cavalry foes.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3,
+          anti: 2
+        },
+        {
+          name: 'Poleaxe+(def)',
+          description: `Effective against cavalry foes.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4,
+          anti: 2
+        },
+        {
+          name: 'Poleaxe+(res)',
+          description: `Effective against cavalry foes.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4,
+          anti: 2
+        },
+        {
+          name: 'Sack o\' Gifts',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          mt: 10
+        },
+        {
+          name: 'Sack o\' Gifts+',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          mt: 14
+        },
+        {
+          name: 'Sack o\' Gifts+(atk)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Sack o\' Gifts+(spd)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Sack o\' Gifts+(def)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Sack o\' Gifts+(res)',
+          description: `If foe initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Wo Gun',
+          description: `Grants +10 damage when Special triggers.`,
+          type: 'axe',
+          mt: 9
+        },
+        {
+          name: 'Wo Gun+',
+          description: `Grants +10 damage when Special triggers.`,
+          type: 'axe',
+          mt: 13
+        },
+        {
+          name: 'Wo Gun+(atk)',
+          description: `Grants +10 damage when Special triggers.`,
+          type: 'axe',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Wo Gun+(spd)',
+          description: `Grants +10 damage when Special triggers.`,
+          type: 'axe',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Wo Gun+(def)',
+          description: `Grants +10 damage when Special triggers.`,
+          type: 'axe',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Wo Gun+(res)',
+          description: `Grants +10 damage when Special triggers.`,
+          type: 'axe',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
         // ============== PRF AXE ============== //
+        {
+          name: 'Noatun',
+          description: `If unit\'s HP ≤ 40%, unit can move to a space adjacent to any ally.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Noatun(eff)',
+          description: `If unit\'s HP ≤ 50%, unit can move to a space adjacent to any ally.
+          If unit\'s HP ≥ 50%, unit can move to a space adjacent to any ally within 2 spaces.`,
+          prf: true,
+          type: 'axe',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Noatun(atk)',
+          description: `If unit\'s HP ≤ 50%, unit can move to a space adjacent to any ally.`,
+          prf: true,
+          type: 'axe',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Noatun(spd)',
+          description: `If unit\'s HP ≤ 50%, unit can move to a space adjacent to any ally.`,
+          prf: true,
+          type: 'axe',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Noatun(def)',
+          description: `If unit\'s HP ≤ 50%, unit can move to a space adjacent to any ally.`,
+          prf: true,
+          type: 'axe',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Noatun(res)',
+          description: `If unit\'s HP ≤ 50%, unit can move to a space adjacent to any ally.`,
+          prf: true,
+          type: 'axe',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
         // ============== TOME(G) ============== //
         // ============ PRF TOME(G)============= //
         // ============== BREATH =============== //
@@ -4356,7 +5266,7 @@ exports.seed = function (knex, Promise) {
   name: '',
   description: ``,
   prf: true,
-  type: 'blue tome',
-  mt: 0
+  type: 'axe',
+  mt: 16
 },
 */
