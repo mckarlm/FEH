@@ -6322,8 +6322,255 @@ exports.seed = function (knex, Promise) {
           spd: 3
         },
         // ============== BREATH =============== //
-        
+        {
+          name: 'Fire Breath',
+          description: ``,
+          type: 'breath',
+          mt: 6
+        },
+        {
+          name: 'Fire Breath+',
+          description: ``,
+          type: 'breath',
+          mt: 8
+        },
+        {
+          name: 'Flametongue',
+          description: ``,
+          type: 'breath',
+          mt: 11
+        },
+        {
+          name: 'Flametongue+',
+          description: ``,
+          type: 'breath',
+          mt: 15
+        },
+        {
+          name: 'Flametongue+(atk)',
+          description: `If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Flametongue+(spd)',
+          description: `If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Flametongue+(def)',
+          description: `If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Flametongue+(res)',
+          description: `If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Dark Breath',
+          description: `After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next action.`,
+          type: 'breath',
+          mt: 9
+        },
+        {
+          name: 'Dark Breath+',
+          description: `After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next action.`,
+          type: 'breath',
+          mt: 13
+        },
+        {
+          name: 'Dark Breath+(atk)',
+          description: `After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Dark Breath+(spd)',
+          description: `After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Dark Breath+(def)',
+          description: `After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Dark Breath+(res)',
+          description: `After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Lightning Breath',
+          description: `Enables counterattack regardless of distance if this unit is attacked. Slows Special trigger (cooldown count+1).`,
+          type: 'breath',
+          mt: 7
+        },
+        {
+          name: 'Lightning Breath+',
+          description: `Enables counterattack regardless of distance if this unit is attacked. Slows Special trigger (cooldown count+1).`,
+          type: 'breath',
+          mt: 11
+        },
+        {
+          name: 'Lightning Breath+(atk)',
+          description: `Enables counterattack regardless of distance if this unit is attacked. Slows Special trigger (cooldown count+1). If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 2,
+          mt: 14,
+          hp: 5
+        },
+        {
+          name: 'Lightning Breath+(spd)',
+          description: `Enables counterattack regardless of distance if this unit is attacked. Slows Special trigger (cooldown count+1). If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 3,
+          mt: 12,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Lightning Breath+(def)',
+          description: `Enables counterattack regardless of distance if this unit is attacked. Slows Special trigger (cooldown count+1). If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 4,
+          mt: 12,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Lightning Breath+(res)',
+          description: `Enables counterattack regardless of distance if this unit is attacked. Slows Special trigger (cooldown count+1). If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 5,
+          mt: 12,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Light Breath',
+          description: `Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.`,
+          type: 'breath',
+          mt: 9
+        },
+        {
+          name: 'Light Breath+',
+          description: `Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.`,
+          type: 'breath',
+          mt: 13
+        },
+        {
+          name: 'Light Breath+(atk)',
+          description: `After combat, if unit attacked, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Light Breath+(spd)',
+          description: `After combat, if unit attacked, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Light Breath+(def)',
+          description: `After combat, if unit attacked, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Light Breath+(res)',
+          description: `After combat, if unit attacked, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Water Breath',
+          description: `Grants Def/Res+4 during combat if foe intitates combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          mt: 10
+        },
+        {
+          name: 'Water Breath+',
+          description: `Grants Def/Res+4 during combat if foe intitates combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          mt: 14
+        },
+        {
+          name: 'Water Breath+(atk)',
+          description: `Grants Def/Res+4 during combat if foe intitates combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 2,
+          mt: 16,
+          hp: 5
+        },
+        {
+          name: 'Water Breath+(spd)',
+          description: `Grants Def/Res+4 during combat if foe intitates combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 3,
+          mt: 14,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Water Breath+(def)',
+          description: `Grants Def/Res+4 during combat if foe intitates combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 4,
+          mt: 14,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Water Breath+(res)',
+          description: `Grants Def/Res+4 during combat if foe intitates combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          type: 'breath',
+          refine: 5,
+          mt: 14,
+          hp: 5,
+          res: 4
+        },
         // ============ PRF BREATH ============= //
+        
         // ================ BOW ================ //
         // ============== PRF BOW ============== //
         // ============== DAGGER =============== //
@@ -6337,7 +6584,7 @@ exports.seed = function (knex, Promise) {
 /*
 {
   name: '',
-  description: ``,
+  description: `If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
   prf: true,
   type: 'breath',
   mt: 0
