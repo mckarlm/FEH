@@ -5673,6 +5673,353 @@ exports.seed = function (knex, Promise) {
           def: 3
         },
         // ============== TOME(G) ============== //
+        {
+          name: 'Wind',
+          description: ``,
+          type: 'green tome',
+          mt: 4
+        },
+        {
+          name: 'Elwind',
+          description: ``,
+          type: 'green tome',
+          mt: 6
+        },
+        {
+          name: 'Rexcalibur',
+          description: ``,
+          type: 'green tome',
+          mt: 9
+        },
+        {
+          name: 'Rexcalibur+',
+          description: ``,
+          type: 'green tome',
+          mt: 13
+        },
+        {
+          name: 'Rexcalibur+(atk)',
+          description: ``,
+          type: 'green tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Rexcalibur+(spd)',
+          description: ``,
+          type: 'green tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Rexcalibur+(def)',
+          description: ``,
+          type: 'green tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Rexcalibur+(res)',
+          description: ``,
+          type: 'green tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Dancer\'s Ring',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'green tome',
+          mt: 8
+        },
+        {
+          name: 'Dancer\'s Ring+',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'green tome',
+          mt: 12
+        },
+        {
+          name: 'Dancer\'s Ring+(atk)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'green tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Dancer\'s Ring+(spd)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'green tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Dancer\'s Ring+(def)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'green tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Dancer\'s Ring+(res)',
+          description: `If unit initiates attack, adjacent allies recover 7 HP after combat.`,
+          type: 'green tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Green Egg',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'green tome',
+          mt: 7
+        },
+        {
+          name: 'Green Egg+',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'green tome',
+          mt: 11
+        },
+        {
+          name: 'Green Egg+(atk)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'green tome',
+          refine: 2,
+          mt: 12,
+          hp: 2
+        },
+        {
+          name: 'Green Egg+(spd)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'green tome',
+          refine: 3,
+          mt: 11,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Green Egg+(def)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'green tome',
+          refine: 4,
+          mt: 11,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Green Egg+(res)',
+          description: `After combat, if unit attacked, restores 4 HP.`,
+          type: 'green tome',
+          refine: 5,
+          mt: 11,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Green Gift',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'green tome',
+          mt: 8
+        },
+        {
+          name: 'Green Gift+',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'green tome',
+          mt: 12
+        },
+        {
+          name: 'Green Gift+(atk)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'green tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Green Gift+(spd)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'green tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Green Gift+(def)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'green tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Green Gift+(res)',
+          description: `If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'green tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Gronnblade',
+          description: `Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
+          type: 'green tome',
+          mt: 9
+        },
+        {
+          name: 'Gronnblade+',
+          description: `Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.`,
+          type: 'green tome',
+          mt: 13
+        },
+        {
+          name: 'Gronnowl',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'green tome',
+          mt: 6
+        },
+        {
+          name: 'Gronnowl+',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'green tome',
+          mt: 10
+        },
+        {
+          name: 'Gronnowl+(atk)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'green tome',
+          refine: 2,
+          mt: 11,
+          hp: 2
+        },
+        {
+          name: 'Gronnowl+(spd)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'green tome',
+          refine: 3,
+          mt: 10,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Gronnowl+(def)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'green tome',
+          refine: 4,
+          mt: 10,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Gronnowl+(res)',
+          description: `During combat, boosts unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          type: 'green tome',
+          refine: 5,
+          mt: 10,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Gronnraven',
+          description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
+          type: 'green tome',
+          mt: 7
+        },
+        {
+          name: 'Gronnraven+',
+          description: `Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.`,
+          type: 'green tome',
+          mt: 11
+        },
+        {
+          name: 'Gronnwolf',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          mt: 6,
+          anti: 2
+        },
+        {
+          name: 'Gronnwolf+',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          mt: 10,
+          anti: 2
+        },
+        {
+          name: 'Keen Gronnwolf',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          mt: 8,
+          anti: 2
+        },
+        {
+          name: 'Keen Gronnwolf+',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          mt: 12,
+          anti: 2
+        },
+        {
+          name: 'Keen Gronnwolf+(eff)',
+          description: `Effective against cavalry foes.
+          If in combat against cavalry foe, nullifies foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'green tome',
+          refine: 1,
+          mt: 12,
+          anti: 2
+        },
+        {
+          name: 'Keen Gronnwolf+(atk)',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 2
+        },
+        {
+          name: 'Keen Gronnwolf+(spd)',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 2
+        },
+        {
+          name: 'Keen Gronnwolf+(def)',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 2
+        },
+        {
+          name: 'Keen Gronnwolf+(res)',
+          description: `Effective against cavalry foes.`,
+          type: 'green tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 2
+        },
         // ============ PRF TOME(G)============= //
         // ============== BREATH =============== //
         // ============ PRF BREATH ============= //
@@ -5691,7 +6038,7 @@ exports.seed = function (knex, Promise) {
   name: '',
   description: ``,
   prf: true,
-  type: 'axe',
+  type: 'green tome',
   mt: 16
 },
 */
