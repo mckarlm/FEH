@@ -6570,8 +6570,130 @@ exports.seed = function (knex, Promise) {
           res: 4
         },
         // ============ PRF BREATH ============= //
-        
+        {
+          name: 'Breath of Fog',
+          description: `Effective against dragon foes. At the start of every second turn, unit recovers 10 HP. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 16,
+          anti: 5
+        },
+        {
+          name: 'Breath of Fog(eff)',
+          description: `Effective against dragon foes. At the start of every second turn, unit recovers 10 HP. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.
+          If unit is within 2 spaces of sword or dragon ally, grants Atk/Def+5 during combat.`,
+          prf: true,
+          type: 'breath',
+          refine: 1,
+          mt: 16,
+          hp: 3,
+          anti: 5
+        },
+        {
+          name: 'Breath of Fog(atk)',
+          description: `Effective against dragon foes. At the start of every second turn, unit recovers 10 HP. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          refine: 2,
+          mt: 18,
+          hp: 5,
+          anti: 5
+        },
+        {
+          name: 'Breath of Fog(spd)',
+          description: `Effective against dragon foes. At the start of every second turn, unit recovers 10 HP. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          anti: 5
+        },
+        {
+          name: 'Breath of Fog(def)',
+          description: `Effective against dragon foes. At the start of every second turn, unit recovers 10 HP. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4,
+          anti: 5
+        },
+        {
+          name: 'Breath of Fog(res)',
+          description: `Effective against dragon foes. At the start of every second turn, unit recovers 10 HP. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4,
+          anti: 5
+        },
+        {
+          name: 'Summer\'s Breath',
+          description: `Effective against dragon foes. Grants Def+3. If foe initiates combat, grants Special count +1 per attack during combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 16,
+          def: 3,
+          anti: 5
+        },
+        {
+          name: 'Divine Mist',
+          description: `Effective against dragon foes. Enables counterattack regardless of distance if this unit is attacked. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 16,
+          anti: 5
+        },
+        {
+          name: 'Great Flame',
+          description: `Grants Atk+3. If unit\'s Def ≥ foe\'s Def+5, foe cannot make a follow-up attack. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 19
+        },
+        {
+          name: 'Spirit Breath',
+          description: `Grants Def+3. If unit initiates combat and unit\'s Def ≥ foe\'s Def+5, unit makes a guaranteed follow-up attack. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 16,
+          def: 3
+        },
+        {
+          name: 'Expiration',
+          description: `Enables counterattack regardless of distance if this unit is attacked. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 16
+        },
+        {
+          name: 'Draconic Rage',
+          description: `Accelerates Special trigger (cooldown count-1). If the number of allies within 2 spaces (excluding unit) > number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 16
+        },
+        {
+          name: 'Breath of Blight',
+          description: `Negates \"effective against dragon foes\" bonuses. At the start of turn 4, deals 10 damage to foes within 3 spaces and restores HP to unit = to number of foes within 3 spaces x 5. If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+          prf: true,
+          type: 'breath',
+          mt: 16
+        },
         // ================ BOW ================ //
+        {
+          name: '',
+          description: `Effective against flying foes.`,
+          prf: true,
+          type: 'bow',
+          mt: 0,
+          anti: 3
+        },
         // ============== PRF BOW ============== //
         // ============== DAGGER =============== //
         // ============ PRF DAGGER ============= //
@@ -6584,9 +6706,10 @@ exports.seed = function (knex, Promise) {
 /*
 {
   name: '',
-  description: `If foe\'s Range = 2, damage calculated using the lower of foe\'s Def or Res.`,
+  description: `Effective against flying foes.`,
   prf: true,
-  type: 'breath',
-  mt: 0
+  type: 'bow',
+  mt: 0,
+  anti: 3
 },
 */
