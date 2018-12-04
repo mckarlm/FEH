@@ -1071,7 +1071,7 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Nameless Blade(eff)',
           description: `Accelerates Special trigger (cooldown count-1).
-          Grants +10 to damage when Special triggers.`,
+          Deals +10 to damage when Special triggers.`,
           prf: true,
           type: 'sword',
           refine: 1,
@@ -1323,7 +1323,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Resolute Blade',
-          description: `Grants Atk+3. Grants +10 to damage when Special triggers.`,
+          description: `Grants Atk+3. Deals +10 to damage when Special triggers.`,
           prf: true,
           type: 'sword',
           mt: 19
@@ -2849,19 +2849,19 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Harmonic Lance',
-          description: `Grants +10 to damage when Special triggers.`,
+          description: `Deals +10 to damage when Special triggers.`,
           type: 'lance',
           mt: 9
         },
         {
           name: 'Harmonic Lance+',
-          description: `Grants +10 to damage when Special triggers.`,
+          description: `Deals +10 to damage when Special triggers.`,
           type: 'lance',
           mt: 13
         },
         {
           name: 'Harmonic Lance+(atk)',
-          description: `Grants +10 to damage when Special triggers.`,
+          description: `Deals +10 to damage when Special triggers.`,
           type: 'lance',
           refine: 2,
           mt: 16,
@@ -2869,7 +2869,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Harmonic Lance+(spd)',
-          description: `Grants +10 to damage when Special triggers.`,
+          description: `Deals +10 to damage when Special triggers.`,
           type: 'lance',
           refine: 3,
           mt: 14,
@@ -2878,7 +2878,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Harmonic Lance+(def)',
-          description: `Grants +10 to damage when Special triggers.`,
+          description: `Deals +10 to damage when Special triggers.`,
           type: 'lance',
           refine: 4,
           mt: 14,
@@ -2887,7 +2887,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Harmonic Lance+(res)',
-          description: `Grants +10 to damage when Special triggers.`,
+          description: `Deals +10 to damage when Special triggers.`,
           type: 'lance',
           refine: 5,
           mt: 14,
@@ -3185,7 +3185,7 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Shanna\'s Lance(eff)',
           description: `Accelerates Special trigger (cooldown count-1).
-          Grants +10 to damage when Special triggers.`,
+          Deals +10 to damage when Special triggers.`,
           prf: true,
           type: 'lance',
           refine: 1,
@@ -3798,13 +3798,13 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Blue Egg',
-          description: `After combat, if unit attacked, restores 4 HP.`,
+          description: `If unit initiates combat, restores 4 HP after combat.`,
           type: 'blue tome',
           mt: 7
         },
         {
           name: 'Blue Egg+',
-          description: `After combat, if unit attacked, restores 4 HP.`,
+          description: `If unit initiates combat, restores 4 HP after combat.`,
           type: 'blue tome',
           mt: 11
         },
@@ -3813,7 +3813,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'blue tome',
           refine: 2,
-          mt: 12,
+          mt: 13,
           hp: 2
         },
         {
@@ -3821,7 +3821,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'blue tome',
           refine: 3,
-          mt: 11,
+          mt: 12,
           hp: 2,
           spd: 2
         },
@@ -3830,7 +3830,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'blue tome',
           refine: 4,
-          mt: 11,
+          mt: 12,
           hp: 2,
           def: 3
         },
@@ -3839,7 +3839,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'blue tome',
           refine: 5,
-          mt: 11,
+          mt: 12,
           hp: 2,
           res: 3
         },
@@ -4337,6 +4337,13 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Missiletainn(Dusk)',
           description: `Accelerates Special trigger (cooldown count-1). At the start of turn 1, grants Special cooldown count-1 to unit for each magic ally on your team (including unit).`,
+          prf: true,
+          type: 'blue tome',
+          mt: 14
+        },
+        {
+          name: 'Valaskjalf',
+          description: `If unit\'s HP ≤ 50% and foe inititates combat, unit can counterattack before foe\'s first attack.`,
           prf: true,
           type: 'blue tome',
           mt: 14
@@ -5145,19 +5152,19 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Wo Gun',
-          description: `Grants +10 damage when Special triggers.`,
+          description: `Deals +10 damage when Special triggers.`,
           type: 'axe',
           mt: 9
         },
         {
           name: 'Wo Gun+',
-          description: `Grants +10 damage when Special triggers.`,
+          description: `Deals +10 damage when Special triggers.`,
           type: 'axe',
           mt: 13
         },
         {
           name: 'Wo Gun+(atk)',
-          description: `Grants +10 damage when Special triggers.`,
+          description: `Deals +10 damage when Special triggers.`,
           type: 'axe',
           refine: 2,
           mt: 16,
@@ -5165,7 +5172,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Wo Gun+(spd)',
-          description: `Grants +10 damage when Special triggers.`,
+          description: `Deals +10 damage when Special triggers.`,
           type: 'axe',
           refine: 3,
           mt: 14,
@@ -5174,7 +5181,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Wo Gun+(def)',
-          description: `Grants +10 damage when Special triggers.`,
+          description: `Deals +10 damage when Special triggers.`,
           type: 'axe',
           refine: 4,
           mt: 14,
@@ -5183,7 +5190,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Wo Gun+(res)',
-          description: `Grants +10 damage when Special triggers.`,
+          description: `Deals +10 damage when Special triggers.`,
           type: 'axe',
           refine: 5,
           mt: 14,
@@ -5264,7 +5271,7 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Hauteclere(eff)',
           description: `Accelerates Special trigger (cooldown count-1).
-          Grants +10 damage when Special triggers.`,
+          Deals +10 damage when Special triggers.`,
           prf: true,
           type: 'axe',
           refine: 1,
@@ -5384,7 +5391,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Berserk Armads',
-          description: `Accelerates Special cooldown (cooldown count-1). If unit\'s HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Grants +10 damage when Special triggers.`,
+          description: `Accelerates Special cooldown (cooldown count-1). If unit\'s HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Deals +10 damage when Special triggers.`,
           prf: true,
           type: 'axe',
           mt: 16
@@ -5781,13 +5788,13 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Green Egg',
-          description: `After combat, if unit attacked, restores 4 HP.`,
+          description: `If unit initiates combat, restores 4 HP after combat.`,
           type: 'green tome',
           mt: 7
         },
         {
           name: 'Green Egg+',
-          description: `After combat, if unit attacked, restores 4 HP.`,
+          description: `If unit initiates combat, restores 4 HP after combat.`,
           type: 'green tome',
           mt: 11
         },
@@ -5796,7 +5803,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'green tome',
           refine: 2,
-          mt: 12,
+          mt: 13,
           hp: 2
         },
         {
@@ -5804,7 +5811,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'green tome',
           refine: 3,
-          mt: 11,
+          mt: 12,
           hp: 2,
           spd: 2
         },
@@ -5813,7 +5820,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'green tome',
           refine: 4,
-          mt: 11,
+          mt: 12,
           hp: 2,
           def: 3
         },
@@ -5822,7 +5829,7 @@ exports.seed = function (knex, Promise) {
           description: `After combat, if unit attacked, restores 4 HP.`,
           type: 'green tome',
           refine: 5,
-          mt: 11,
+          mt: 12,
           hp: 2,
           res: 3
         },
@@ -6020,8 +6027,302 @@ exports.seed = function (knex, Promise) {
           res: 3,
           anti: 2
         },
+        {
+          name: 'Hibiscus Tome',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'green tome',
+          mt: 8
+        },
+        {
+          name: 'Hibiscus Tome+',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'green tome',
+          mt: 12
+        },
+        {
+          name: 'Hibiscus Tome+(atk)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'green tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Hibiscus Tome+(spd)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'green tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Hibiscus Tome+(def)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'green tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Hibiscus Tome+(res)',
+          description: `Grants Atk/Spd+1 to allies within 2 spaces during combat.`,
+          type: 'green tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Spectral Tome',
+          description: `After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'green tome',
+          mt: 8
+        },
+        {
+          name: 'Spectral Tome+',
+          description: `After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'green tome',
+          mt: 12
+        },
+        {
+          name: 'Spectral Tome+(atk)',
+          description: `After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'green tome',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Spectral Tome+(spd)',
+          description: `After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'green tome',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Spectral Tome+(def)',
+          description: `After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'green tome',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Spectral Tome+(res)',
+          description: `After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'green tome',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
         // ============ PRF TOME(G)============= //
+        {
+          name: 'Muninn\'s Egg',
+          description: `Grants Res+3. At start of turn, if unit\'s ≥ 50%, inflicts Atk/Spd-5 on foe on the enemy team with the lowest Spd through its next action.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14,
+          res: 3
+        },
+        {
+          name: 'Blizzard',
+          description: `Grants Res+3. Grants bonus to unit\'s Atk = total penalties on foe during combat.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14,
+          res: 3
+        },
+        {
+          name: 'Elivagar',
+          description: `If unit initiates combat, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14
+        },
+        {
+          name: 'Excalibur',
+          description: `Effective against flying foes.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Excalibur(eff)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).
+          If unit is within 2 spaces of magic or staff ally, grants Atk/Spd+5.`,
+          prf: true,
+          type: 'green tome',
+          refine: 1,
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Excalibur(atk)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'green tome',
+          refine: 2,
+          mt: 15,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Excalibur(spd)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'green tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Excalibur(def)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'green tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Excalibur(res)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'green tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Dark Excalibur',
+          description: `Deals +10 damage when Special triggers.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14
+        },
+        {
+          name: 'Forseti',
+          description: `Grants Spd+3. If unit\'s HP ≥ 50%, and unit inititates combat, unit can make a follow-up attack before foe can counterattack.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14,
+          spd: 3
+        },
+        {
+          name: 'Divine Naga',
+          description: `Effective against dragon foes. Neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14,
+          anti: 5
+        },
+        {
+          name: 'Naga',
+          description: `Effective against dragon foes. If foe initiates combat, grants Def/Res+2 during combat.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14,
+          anti: 5
+        },
+        {
+          name: 'Thunderhead',
+          description: `Adds total bonuses on unit to damage dealt.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14
+        },
+        {
+          name: 'Giga Excalibur',
+          description: `Grants Spd+3. If unit\'s Spd > foe\'s Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.)`,
+          prf: true,
+          type: 'green tome',
+          mt: 14
+        },
+        {
+          name: 'Wind\'s Brand',
+          description: `At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14
+        },
+        {
+          name: 'Wind\'s Brand(eff)',
+          description: `At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.
+          During combat, boost unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'green tome',
+          refine: 1,
+          mt: 14
+        },
+        {
+          name: 'Wind\'s Brand(atk)',
+          description: `At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.`,
+          prf: true,
+          type: 'green tome',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Wind\'s Brand(spd)',
+          description: `At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.`,
+          prf: true,
+          type: 'green tome',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Wind\'s Brand(def)',
+          description: `At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.`,
+          prf: true,
+          type: 'green tome',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Wind\'s Brand(res)',
+          description: `At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.`,
+          prf: true,
+          type: 'green tome',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Nifl Frostflowers',
+          description: `Grants Atk+3. During combat, boosts unit\'s Atk/Spd by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.`,
+          prf: true,
+          type: 'green tome',
+          mt: 17
+        },
+        {
+          name: 'Book of Shadows',
+          description: `Grants Spd+3. If unit is adjacent to ally, inflicts Atk/Spd/Def/Res-4 on foe during combat.`,
+          prf: true,
+          type: 'green tome',
+          mt: 14,
+          spd: 3
+        },
         // ============== BREATH =============== //
+        
         // ============ PRF BREATH ============= //
         // ================ BOW ================ //
         // ============== PRF BOW ============== //
@@ -6038,7 +6339,7 @@ exports.seed = function (knex, Promise) {
   name: '',
   description: ``,
   prf: true,
-  type: 'green tome',
-  mt: 16
+  type: 'breath',
+  mt: 0
 },
 */
