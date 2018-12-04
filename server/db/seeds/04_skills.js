@@ -6687,13 +6687,502 @@ exports.seed = function (knex, Promise) {
         },
         // ================ BOW ================ //
         {
-          name: '',
+          name: 'Iron Bow',
           description: `Effective against flying foes.`,
-          prf: true,
           type: 'bow',
-          mt: 0,
+          mt: 4,
           anti: 3
         },
+        {
+          name: 'Steel Bow',
+          description: `Effective against flying foes.`,
+          type: 'bow',
+          mt: 6,
+          anti: 3
+        },
+        {
+          name: 'Silver Bow',
+          description: `Effective against flying foes.`,
+          type: 'bow',
+          mt: 9,
+          anti: 3
+        },
+        {
+          name: 'Silver Bow+',
+          description: `Effective against flying foes.`,
+          type: 'bow',
+          mt: 13,
+          anti: 3
+        },
+        {
+          name: 'Silver Bow+(atk)',
+          description: `Effective against flying foes.`,
+          type: 'bow',
+          refine: 2,
+          mt: 15,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Silver Bow+(spd)',
+          description: `Effective against flying foes.`,
+          type: 'bow',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Silver Bow+(def)',
+          description: `Effective against flying foes.`,
+          type: 'bow',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Silver Bow+(res)',
+          description: `Effective against flying foes.`,
+          type: 'bow',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Brave Bow',
+          description: `Effective against flying foes. Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
+          type: 'bow',
+          mt: 4,
+          spd: -5,
+          anti: 3
+        },
+        {
+          name: 'Brave Bow+',
+          description: `Effective against flying foes. Inflicts Spd-5. If unit initiates combat, unit attacks twice.`,
+          type: 'bow',
+          mt: 7,
+          spd: -5,
+          anti: 3
+        },
+        {
+          name: 'Killer Bow',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          mt: 5,
+          anti: 3
+        },
+        {
+          name: 'Killer Bow+',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          mt: 9,
+          anti: 3
+        },
+        {
+          name: 'Slaying Bow',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Slaying Bow+',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Slaying Bow+(atk)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Slaying Bow+(spd)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Slaying Bow+(def)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Slaying Bow+(res)',
+          description: `Effective against flying foes. Accelerates Special trigger (cooldown count-1).`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Assassin\'s Bow',
+          description: `Effective against flying foes. In combat against colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.`,
+          type: 'bow',
+          mt: 7,
+          anti: 3
+        },
+        {
+          name: 'Assassin\'s Bow+',
+          description: `Effective against flying foes. In combat against colorless dagger foe, unit makes a guaranteed follow-up attack and foe cannot make a follow-up attack.`,
+          type: 'bow',
+          mt: 11,
+          anti: 3
+        },
+        {
+          name: 'Guard Bow',
+          description: `Effective against flying foes. If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Guard Bow+',
+          description: `Effective against flying foes. If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Guard Bow+(atk)',
+          description: `Effective against flying foes. If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Guard Bow+(spd)',
+          description: `Effective against flying foes. If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Guard Bow+(def)',
+          description: `Effective against flying foes. If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Guard Bow+(res)',
+          description: `Effective against flying foes. If foe initiates combat and uses bow, dagger, magic, or staff, grants Def/Res+6 during combat.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Clarisse\' Bow',
+          description: `Effective against flying foes. If unit initiates combat, inflicts Atk/Spd-5 to foes within 2 spaces of target after combat.`,
+          type: 'bow',
+          mt: 7,
+          anti: 3
+        },
+        {
+          name: 'Clarisse\' Bow+',
+          description: `Effective against flying foes. If unit initiates combat, inflicts Atk/Spd-5 to foes within 2 spaces of target after combat.`,
+          type: 'bow',
+          mt: 11,
+          anti: 3
+        },
+        {
+          name: 'Clarisse\' Bow+(atk)',
+          description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
+          type: 'bow',
+          refine: 2,
+          mt: 12,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Clarisse\' Bow+(spd)',
+          description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
+          type: 'bow',
+          refine: 3,
+          mt: 11,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Clarisse\' Bow+(def)',
+          description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
+          type: 'bow',
+          refine: 4,
+          mt: 11,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Clarisse\' Bow+(res)',
+          description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
+          type: 'bow',
+          refine: 5,
+          mt: 11,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Cocobow',
+          description: `Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Cocobow+',
+          description: `Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Cocobow+(atk)',
+          description: `Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Cocobow+(spd)',
+          description: `Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Cocobow+(def)',
+          description: `Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Cocobow+(res)',
+          description: `Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Cupid Arrow',
+          description: `Effective against flying foes. If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Cupid Arrow+',
+          description: `Effective against flying foes. If unit initiates combat, grants Def/Res+2 to allies within 2 spaces for 1 turn after combat.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Cupid Arrow+(atk)',
+          description: `Effective against flying foes. After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Cupid Arrow+(spd)',
+          description: `Effective against flying foes. After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Cupid Arrow+(def)',
+          description: `Effective against flying foes. After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Cupid Arrow+(res)',
+          description: `Effective against flying foes. After combat, if unit attacked, grants Def/Res+5 to unit and allies within 2 spaces of unit for 1 turn.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Devilish Bow',
+          description: `Effective against flying foes. Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Devilish Bow+',
+          description: `Effective against flying foes. Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Devilish Bow+(atk)',
+          description: `Effective against flying foes. Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Devilish Bow+(spd)',
+          description: `Effective against flying foes. Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Devilish Bow+(def)',
+          description: `Effective against flying foes. Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Devilish Bow+(res)',
+          description: `Effective against flying foes. Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.)`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Firesweep Bow',
+          description: `Effective against flying foes. Unit and foe cannot counterattack.`,
+          type: 'bow',
+          mt: 7,
+          anti: 3
+        },
+        {
+          name: 'Firesweep Bow+',
+          description: `Effective against flying foes. Unit and foe cannot counterattack.`,
+          type: 'bow',
+          mt: 11,
+          anti: 3
+        },
+        {
+          name: 'Fishie Bow',
+          description: `Effective against flying foes. If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Fishie Bow+',
+          description: `Effective against flying foes. If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Fishie Bow+(atk)',
+          description: `Effective against flying foes. If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Fishie Bow+(spd)',
+          description: `Effective against flying foes. If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Fishie Bow+(def)',
+          description: `Effective against flying foes. If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Fishie Bow+(res)',
+          description: `Effective against flying foes. If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        
         // ============== PRF BOW ============== //
         // ============== DAGGER =============== //
         // ============ PRF DAGGER ============= //
