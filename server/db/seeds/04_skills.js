@@ -5050,7 +5050,7 @@ exports.seed = function (knex, Promise) {
         {
           name: 'Poleaxe+(eff)',
           description: `Effective against cavalry foes.
-          Neutralizes cavalr foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          Neutralizes cavalry foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
           type: 'axe',
           refine: 1,
           mt: 14,
@@ -5246,6 +5246,431 @@ exports.seed = function (knex, Promise) {
           mt: 16,
           hp: 5,
           res: 4
+        },
+        {
+          name: 'Byleistr',
+          description: `At start of odd-numbered turns, grants Atk/Spd/Def/Res+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent)`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Hauteclere',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Hauteclere(eff)',
+          description: `Accelerates Special trigger (cooldown count-1).
+          Grants +10 damage when Special triggers.`,
+          prf: true,
+          type: 'axe',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Hauteclere(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Hauteclere(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Hauteclere(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Hauteclere(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Axe of Virility',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'axe',
+          mt: 16,
+          anti: 4
+        },
+        {
+          name: 'Axe of Virility(eff)',
+          description: `Effective against armored foes.
+          Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 1,
+          mt: 19,
+          hp: 3,
+          spd: 3,
+          def: 3,
+          res: 3,
+          anti: 4
+        },
+        {
+          name: 'Axe of Virility(atk)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'axe',
+          refine: 2,
+          mt: 18,
+          hp: 5,
+          anti: 4
+        },
+        {
+          name: 'Axe of Virility(spd)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'axe',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3,
+          anti: 4
+        },
+        {
+          name: 'Axe of Virility(def)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'axe',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4,
+          anti: 4
+        },
+        {
+          name: 'Axe of Virility(res)',
+          description: `Effective against armored foes.`,
+          prf: true,
+          type: 'axe',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4,
+          anti: 4
+        },
+        {
+          name: 'Armads',
+          description: `Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Berserk Armads',
+          description: `Accelerates Special cooldown (cooldown count-1). If unit\'s HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Grants +10 damage when Special triggers.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Thunder Armads',
+          description: `Grants Def+3. If number of allies within 2 spaces (excluding unit) > number of foes within 2 spaces (excluding target), foe cannot make a follow-up attack.`,
+          prf: true,
+          type: 'axe',
+          mt: 16,
+          def: 3
+        },
+        {
+          name: 'Basilikos',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Basilikos(eff)',
+          description: `Accelerates Special trigger (cooldown count-1).
+          Grants Atk/Spd+5. Inflicts Def/Res-5.`,
+          prf: true,
+          type: 'axe',
+          refine: 1,
+          mt: 21,
+          hp: 3,
+          spd: 5,
+          def: -5,
+          res: -5
+        },
+        {
+          name: 'Basilikos(atk)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Basilikos(spd)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Basilikos(def)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Basilikos(res)',
+          description: `Accelerates Special trigger (cooldown count-1).`,
+          prf: true,
+          type: 'axe',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Stout Tomahawk',
+          description: `Enables counterattack regardless of distance when this unit is attacked.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Garm',
+          description: `Grants Atk+3. If a bonus granted by a skill like Rally or Hone and/or extra movement granted by a skill like Armor March or Armored Boots is active, unit makes a guaranteed follow-up attack.`,
+          prf: true,
+          type: 'axe',
+          mt: 19
+        },
+        {
+          name: 'Urvan',
+          description: `Accelerates Speccial trigger (cooldown count-1). If unit receives consecutive attacks, reduces damage from foe\'s second attack by 80%.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Draconic Poleax',
+          description: `If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle advantage, reduces Atk by 20%.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Draconic Poleax(eff)',
+          description: `If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle advantage, reduces Atk by 20%.
+          At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally\'s movement type on current team ≤ 2.`,
+          prf: true,
+          type: 'axe',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Draconic Poleax(atk)',
+          description: `If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle advantage, reduces Atk by 20%.`,
+          prf: true,
+          type: 'axe',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Draconic Poleax(spd)',
+          description: `If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle advantage, reduces Atk by 20%.`,
+          prf: true,
+          type: 'axe',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Draconic Poleax(def)',
+          description: `If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle advantage, reduces Atk by 20%.`,
+          prf: true,
+          type: 'axe',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Draconic Poleax(res)',
+          description: `If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle advantage, reduces Atk by 20%.`,
+          prf: true,
+          type: 'axe',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Wolf Berg',
+          description: `Grants Def+3. If number of foes within 2 spaces (excluding target) ≥ number of allies within 2 spaces (excluding unit), grants Atk/Spd/Def/Res+4. during combat.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Cherche\'s Axe',
+          description: `Spd-5. Attack twice when initiating combat.`,
+          prf: true,
+          type: 'axe',
+          mt: 11,
+          spd: -5
+        },
+        {
+          name: 'Cherche\'s Axe(eff)',
+          description: `Spd-5. Attack twice when initiating combat.
+          At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe\'s next action.`,
+          prf: true,
+          type: 'axe',
+          refine: 1,
+          mt: 11,
+          hp: 3,
+          spd: -5
+        },
+        {
+          name: 'Cherche\'s Axe(atk)',
+          description: `Spd-5. Attack twice when initiating combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 2,
+          mt: 12,
+          hp: 5,
+          spd: -5
+        },
+        {
+          name: 'Cherche\'s Axe(spd)',
+          description: `Spd-5. Attack twice when initiating combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 3,
+          mt: 11,
+          hp: 5,
+          spd: -2
+        },
+        {
+          name: 'Cherche\'s Axe(def)',
+          description: `Spd-5. Attack twice when initiating combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 4,
+          mt: 11,
+          hp: 5,
+          def: 4,
+          spd: -5
+        },
+        {
+          name: 'Cherche\'s Axe(res)',
+          description: `Spd-5. Attack twice when initiating combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 5,
+          mt: 11,
+          hp: 5,
+          res: 4,
+          spd: -5
+        },
+        {
+          name: 'Urdr',
+          description: `If Sing or Dance is used, grants Atk/Spd/Def/Res+3 to target.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Camilla\'s Axe',
+          description: `If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd+4 during combat.`,
+          prf: true,
+          type: 'axe',
+          mt: 16
+        },
+        {
+          name: 'Camilla\'s Axe(eff)',
+          description: `If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd+4 during combat.
+          Grants Atk/Spd+3 to cavalry and flying allies within 2 spaces during combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 1,
+          mt: 16,
+          hp: 3
+        },
+        {
+          name: 'Camilla\'s Axe(atk)',
+          description: `If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd+4 during combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 2,
+          mt: 18,
+          hp: 5
+        },
+        {
+          name: 'Camilla\'s Axe(spd)',
+          description: `If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd+4 during combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 3,
+          mt: 16,
+          hp: 5,
+          spd: 3
+        },
+        {
+          name: 'Camilla\'s Axe(def)',
+          description: `If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd+4 during combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 4,
+          mt: 16,
+          hp: 5,
+          def: 4
+        },
+        {
+          name: 'Camilla\'s Axe(res)',
+          description: `If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd+4 during combat.`,
+          prf: true,
+          type: 'axe',
+          refine: 5,
+          mt: 16,
+          hp: 5,
+          res: 4
+        },
+        {
+          name: 'Sinmara',
+          description: `Grants Def+3. At start of turn, deals 20 damage to foes within 2 spaces.`,
+          prf: true,
+          type: 'axe',
+          mt: 16,
+          def: 3
         },
         // ============== TOME(G) ============== //
         // ============ PRF TOME(G)============= //
