@@ -61,7 +61,7 @@ Thokk
   Exalted Falchion
   Wing Sword
   Aura (b)
-Parthia
+  Parthia
   Hauteclere
   Huginn's Egg (b)
   Excalibur (g)
@@ -105,8 +105,8 @@ Parthia
   Nameless Blade
   Durandal
   Sol Katti
-Mulagir
-Swift Mulagir
+  Mulagir
+  Swift Mulagir
   Armads
   Berserk Armads
   Thunder Armads
@@ -125,7 +125,7 @@ Deathly Dagger
   Flame Siegmund
   Garm
   Weirding Tome (b)
-Nidhogg
+  Nidhogg
   Vidofnir
   Fruit of Idunn (r)
   Naglfar (r)
@@ -158,7 +158,7 @@ Peshkatz
   Cherche's Axe
   Grimoire (r)
   Geirskogul
-Thogn
+  Thogn
   Missiletainn(Dark)
   Grima's Truth (r)
   Yato
@@ -168,9 +168,9 @@ Thogn
 Felicia's Plate
   Raijinto
   Hinoka's Spear
-Warrior Princess
-Fujin Yumi
-Skadi
+  Warrior Princess
+  Fujin Yumi
+  Skadi
   Breath of Blight
   Siegfried
   Camilla's Axe

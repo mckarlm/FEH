@@ -6904,21 +6904,21 @@ exports.seed = function (knex, Promise) {
           anti: 3
         },
         {
-          name: 'Clarisse\' Bow',
+          name: 'Clarisse\'s Bow',
           description: `Effective against flying foes. If unit initiates combat, inflicts Atk/Spd-5 to foes within 2 spaces of target after combat.`,
           type: 'bow',
           mt: 7,
           anti: 3
         },
         {
-          name: 'Clarisse\' Bow+',
+          name: 'Clarisse\'s Bow+',
           description: `Effective against flying foes. If unit initiates combat, inflicts Atk/Spd-5 to foes within 2 spaces of target after combat.`,
           type: 'bow',
           mt: 11,
           anti: 3
         },
         {
-          name: 'Clarisse\' Bow+(atk)',
+          name: 'Clarisse\'s Bow+(atk)',
           description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
           type: 'bow',
           refine: 2,
@@ -6927,7 +6927,7 @@ exports.seed = function (knex, Promise) {
           anti: 3
         },
         {
-          name: 'Clarisse\' Bow+(spd)',
+          name: 'Clarisse\'s Bow+(spd)',
           description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
           type: 'bow',
           refine: 3,
@@ -6937,7 +6937,7 @@ exports.seed = function (knex, Promise) {
           anti: 3
         },
         {
-          name: 'Clarisse\' Bow+(def)',
+          name: 'Clarisse\'s Bow+(def)',
           description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
           type: 'bow',
           refine: 4,
@@ -6947,7 +6947,7 @@ exports.seed = function (knex, Promise) {
           anti: 3
         },
         {
-          name: 'Clarisse\' Bow+(res)',
+          name: 'Clarisse\'s Bow+(res)',
           description: `Effective against flying foes. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next action.`,
           type: 'bow',
           refine: 5,
@@ -7182,9 +7182,915 @@ exports.seed = function (knex, Promise) {
           res: 3,
           anti: 3
         },
-        
+        {
+          name: 'Gratia',
+          description: `Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Gratia+',
+          description: `Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Gratia+(atk)',
+          description: `Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Gratia+(spd)',
+          description: `Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Gratia+(def)',
+          description: `Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Gratia+(res)',
+          description: `Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Hama Ya',
+          description: `Effective against flying foes. Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Hama Ya+',
+          description: `Effective against flying foes. Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Hama Ya+(atk)',
+          description: `Effective against flying foes. Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Hama Ya+(spd)',
+          description: `Effective against flying foes. Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Hama Ya+(def)',
+          description: `Effective against flying foes. Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Hama Ya+(res)',
+          description: `Effective against flying foes. Grants Def/Res+2 to allies within 2 spaces during combat.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Monstrous Bow',
+          description: `Effective against flying foes. After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Monstrous Bow+',
+          description: `Effective against flying foes. After combat, if unit attacked, converts bonuses on foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Monstrous Bow+(atk)',
+          description: `Effective against flying foes. After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Monstrous Bow+(spd)',
+          description: `Effective against flying foes. After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Monstrous Bow+(def)',
+          description: `Effective against flying foes. After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Monstrous Bow+(res)',
+          description: `Effective against flying foes. After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Refreshing Bolt',
+          description: `Effective against flying foes. At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Refreshing Bolt+',
+          description: `Effective against flying foes. At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Refreshing Bolt+(atk)',
+          description: `Effective against flying foes. At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Refreshing Bolt+(spd)',
+          description: `Effective against flying foes. At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Refreshing Bolt+(def)',
+          description: `Effective against flying foes. At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Refreshing Bolt+(res)',
+          description: `Effective against flying foes. At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2, but after combat, if unit attacked, deals 2 damage to unit.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Shining Bow',
+          description: `Effective against flying foes. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
+          type: 'bow',
+          mt: 8,
+          anti: 3
+        },
+        {
+          name: 'Shining Bow+',
+          description: `Effective against flying foes. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
+          type: 'bow',
+          mt: 12,
+          anti: 3
+        },
+        {
+          name: 'Shining Bow+(atk)',
+          description: `Effective against flying foes. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
+          type: 'bow',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Shining Bow+(spd)',
+          description: `Effective against flying foes. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
+          type: 'bow',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Shining Bow+(def)',
+          description: `Effective against flying foes. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
+          type: 'bow',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Shining Bow+(res)',
+          description: `Effective against flying foes. If foe\'s Def ≥ foe\'s Res+5, deals +7 damage.`,
+          type: 'bow',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
         // ============== PRF BOW ============== //
+        {
+          name: 'Parthia',
+          description: `Effective against flying foes. Grants Res+4 during combat if unit initiates attack.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Parthia(eff)',
+          description: `Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.
+          Grants Atk+6 during combat if foe uses bow, dagger, magic, or staff.`,
+          prf: true,
+          type: 'bow',
+          refine: 1,
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Parthia(atk)',
+          description: `Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.`,
+          prf: true,
+          type: 'bow',
+          refine: 2,
+          mt: 15,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Parthia(spd)',
+          description: `Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.`,
+          prf: true,
+          type: 'bow',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Parthia(def)',
+          description: `Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.`,
+          prf: true,
+          type: 'bow',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Parthia(res)',
+          description: `Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.`,
+          prf: true,
+          type: 'bow',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Mulagir',
+          description: `Effective against flying foes. Grants Spd+3. Neutralizes magic foe\'s bonuses (from skills like Fortify, Rally, etc.) during combat.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          spd: 3,
+          anti: 3
+        },
+        {
+          name: 'Swift Mulagir',
+          description: `Effective against flying foes. Grants Res+3. If number of allies within 2 spaces (excluding unit) > number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Nidhogg',
+          description: `Effective against flying foes. During combat, boost unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Nidhogg(eff)',
+          description: `Effective against flying foes. During combat, boost unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.
+          Magic and dragon foes cannot counterattack.`,
+          prf: true,
+          type: 'bow',
+          refine: 1,
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Nidhogg(atk)',
+          description: `Effective against flying foes. During combat, boost unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'bow',
+          refine: 2,
+          mt: 15,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Nidhogg(spd)',
+          description: `Effective against flying foes. During combat, boost unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'bow',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Nidhogg(def)',
+          description: `Effective against flying foes. During combat, boost unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'bow',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Nidhogg(res)',
+          description: `Effective against flying foes. During combat, boost unit\'s Atk/Spd/Def/Res by number of adjacent allies x 2.`,
+          prf: true,
+          type: 'bow',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Thogn',
+          description: `Effective against flying foes. Grants Spd+3. If unit initiates combat and foe uses sword, lance, axe, or dragonstone, grants Atk/Spd/Def/Res+4 during combat.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          spd: 3,
+          anti: 3
+        },
+        {
+          name: 'Warrior Princess',
+          description: `Effective against flying and armored foes. Grants Spd+3. Grants Atk+3 to allies within 2 spaces during combat.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          spd: 3,
+          anti: 7
+        },
+        {
+          name: 'Fujin Yumi',
+          description: `Effective against flying foes. If unit\'s HP ≥ 50%, unit can pass through foes.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Fujin Yumi(eff)',
+          description: `Effective against flying foes. If unit\'s HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain)
+          If unit\'s HP ≥ 50%, unit can move adjacent to any ally within 2 spaces.`,
+          prf: true,
+          type: 'bow',
+          refine: 1,
+          mt: 14,
+          anti: 3
+        },
+        {
+          name: 'Fujin Yumi(atk)',
+          description: `Effective against flying foes. If unit\'s HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain)`,
+          prf: true,
+          type: 'bow',
+          refine: 2,
+          mt: 15,
+          hp: 2,
+          anti: 3
+        },
+        {
+          name: 'Fujin Yumi(spd)',
+          description: `Effective against flying foes. If unit\'s HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain)`,
+          prf: true,
+          type: 'bow',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2,
+          anti: 3
+        },
+        {
+          name: 'Fujin Yumi(def)',
+          description: `Effective against flying foes. If unit\'s HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain)`,
+          prf: true,
+          type: 'bow',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3,
+          anti: 3
+        },
+        {
+          name: 'Fujin Yumi(res)',
+          description: `Effective against flying foes. If unit\'s HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain)`,
+          prf: true,
+          type: 'bow',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3,
+          anti: 3
+        },
+        {
+          name: 'Skadi',
+          description: `Effective against flying foes. Grants Spd+3. At the start of turn 3, deals 10 damage to foes within 3 columns centered on unit, and converts bonuses on those foes into penalties through their next actions.`,
+          prf: true,
+          type: 'bow',
+          mt: 14,
+          spd: 3,
+          anti: 3
+        },
         // ============== DAGGER =============== //
+        {
+          name: 'Iron Dagger',
+          description: `After combat, if unit attacked, inflicts Def/Res-3 on foe through their next action.`,
+          type: 'dagger',
+          mt: 3
+        },
+        {
+          name: 'Steel Dagger',
+          description: `After combat, if unit attacked, inflicts Def/Res-3 on foe through their next action.`,
+          type: 'dagger',
+          mt: 5
+        },
+        {
+          name: 'Silver Dagger',
+          description: `After combat, if unit attacked, inflicts Def/Res-5 on foe through their next action.`,
+          type: 'dagger',
+          mt: 7
+        },
+        {
+          name: 'Silver Dagger+',
+          description: `After combat, if unit attacked, inflicts Def/Res-7 on foe through their next action.`,
+          type: 'dagger',
+          mt: 10
+        },
+        {
+          name: 'Silver Dagger+(atk)',
+          description: `After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 16,
+          hp: 2
+        },
+        {
+          name: 'Silver Dagger+(spd)',
+          description: `After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 15,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Silver Dagger+(def)',
+          description: `After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 15,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Silver Dagger+(res)',
+          description: `After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 15,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Barb Shuriken',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8
+        },
+        {
+          name: 'Barb Shuriken+',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12
+        },
+        {
+          name: 'Barb Shuriken+(atk)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Barb Shuriken+(spd)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Barb Shuriken+(def)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Barb Shuriken+(res)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Bottled Juice',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8
+        },
+        {
+          name: 'Bottled Juice+',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12
+        },
+        {
+          name: 'Bottled Juice+(atk)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Bottled Juice+(spd)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Bottled Juice+(def)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Bottled Juice+(res)',
+          description: `Inflicts Special cooldown charge-1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Cloud Maiougi',
+          description: `Effective against dragon foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8,
+          anti: 5
+        },
+        {
+          name: 'Cloud Maiougi+',
+          description: `Effective against dragon foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12,
+          anti: 5
+        },
+        {
+          name: 'Cloud Maiougi+(atk)',
+          description: `Effective against dragon foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 5
+        },
+        {
+          name: 'Cloud Maiougi+(spd)',
+          description: `Effective against dragon foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 5
+        },
+        {
+          name: 'Cloud Maiougi+(def)',
+          description: `Effective against dragon foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 5
+        },
+        {
+          name: 'Cloud Maiougi+(res)',
+          description: `Effective against dragon foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 5
+        },
+        {
+          name: 'Dancer\'s Fan',
+          description: `If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 7
+        },
+        {
+          name: 'Dancer\'s Fan+',
+          description: `If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 10
+        },
+        {
+          name: 'Dancer\'s Fan+(atk)',
+          description: `If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Dancer\'s Fan+(spd)',
+          description: `If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Dancer\'s Fan+(def)',
+          description: `If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Dancer\'s Fan+(res)',
+          description: `If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Dusk Uchiwa',
+          description: `Effective against cavalry foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8,
+          anti: 2
+        },
+        {
+          name: 'Dusk Uchiwa+',
+          description: `Effective against cavalry foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12,
+          anti: 2
+        },
+        {
+          name: 'Dusk Uchiwa+(atk)',
+          description: `Effective against cavalry foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 2
+        },
+        {
+          name: 'Dusk Uchiwa+(spd)',
+          description: `Effective against cavalry foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 2
+        },
+        {
+          name: 'Dusk Uchiwa+(def)',
+          description: `Effective against cavalry foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 2
+        },
+        {
+          name: 'Dusk Uchiwa+(res)',
+          description: `Effective against cavalry foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 2
+        },
+        {
+          name: 'Kagami Mochi',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8
+        },
+        {
+          name: 'Kagami Mochi+',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12
+        },
+        {
+          name: 'Kagami Mochi+(atk)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Kagami Mochi+(spd)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Kagami Mochi+(def)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Kagami Mochi+(res)',
+          description: `Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Kitty Paddle',
+          description: `Effective against magic foes. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 5,
+          anti: 6
+        },
+        {
+          name: 'Kitty Paddle+',
+          description: `Effective against magic foes. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 7,
+          anti: 6
+        },
+        {
+          name: 'Lethal Carrot',
+          description: `Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8
+        },
+        {
+          name: 'Lethal Carrot+',
+          description: `Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12
+        },
+        {
+          name: 'Lethal Carrot+(atk)',
+          description: `Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Lethal Carrot+(spd)',
+          description: `Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Lethal Carrot+(def)',
+          description: `Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Lethal Carrot+(res)',
+          description: `Deals +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
         // ============ PRF DAGGER ============= //
         // =============== STAFF =============== //
         // ============= PRF STAFF ============= //
@@ -7195,10 +8101,9 @@ exports.seed = function (knex, Promise) {
 /*
 {
   name: '',
-  description: `Effective against flying foes.`,
+  description: ``,
   prf: true,
-  type: 'bow',
-  mt: 0,
-  anti: 3
+  type: 'dagger',
+  mt: 0
 },
 */
