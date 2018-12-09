@@ -116,7 +116,7 @@ Thokk
   Florina's Lance
   Vassal's Blade
   Regal Blade
-Deathly Dagger
+  Deathly Dagger
   Giga Excalibur (g)
   Sieglinde
   Gleipnir (r)
@@ -145,7 +145,7 @@ Deathly Dagger
   Alondite
   Thani (b)
   Dawn Suzu (r)
-Peshkatz
+  Peshkatz
   Cymbeline (r)
   Falchion(Awakening)
   Sealed Falchion
@@ -165,7 +165,7 @@ Peshkatz
   Draconic Rage
   Urdr
   Book of Shadows (g)
-Felicia's Plate
+  Felicia's Plate
   Raijinto
   Hinoka's Spear
   Warrior Princess
@@ -177,13 +177,13 @@ Felicia's Plate
   Book of Dreams (r)
   Brynhildr (r)
   Odin's Grimoire (b)
-Hoarfrost Knife
+  Hoarfrost Knife
   Bright Naginata
   Dark Greatsword
   Missiletainn(Dusk) (b)
 
   Gjoll
-Sylgr
+  Sylgr
   Sinmara
   Imhullu (r)
 */

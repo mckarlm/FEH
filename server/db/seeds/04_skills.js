@@ -1126,15 +1126,15 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sol Katti',
-          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
           prf: true,
           type: 'sword',
           mt: 16
         },
         {
           name: 'Sol Katti(eff)',
-          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.
-          If unit initiates combat against foe that can counter and unit's HP ≤ 75%, unit makes a guaranteed follow-up attack.`,
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.
+          If unit initiates combat against foe that can counter and unit\'s HP ≤ 75%, unit makes a guaranteed follow-up attack.`,
           prf: true,
           type: 'sword',
           refine: 1,
@@ -1143,7 +1143,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sol Katti(atk)',
-          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
           prf: true,
           type: 'sword',
           refine: 2,
@@ -1152,7 +1152,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sol Katti(spd)',
-          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
           prf: true,
           type: 'sword',
           refine: 3,
@@ -1162,7 +1162,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sol Katti(def)',
-          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
           prf: true,
           type: 'sword',
           refine: 4,
@@ -1172,7 +1172,7 @@ exports.seed = function (knex, Promise) {
         },
         {
           name: 'Sol Katti(res)',
-          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.`,
+          description: `If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit\'s attack.`,
           prf: true,
           type: 'sword',
           refine: 5,
@@ -8091,7 +8091,439 @@ exports.seed = function (knex, Promise) {
           hp: 2,
           res: 3
         },
+        {
+          name: 'Poison Dagger',
+          description: `Effective against infantry foes. After combat, if unit attacked, inflicts Def/Res-4 on infantry foe through its next action. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 2,
+          anti: 1
+        },
+        {
+          name: 'Poison Dagger+',
+          description: `Effective against infantry foes. After combat, if unit attacked, inflicts Def/Res-6 on infantry foe through its next action. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 5,
+          anti: 1
+        },
+        {
+          name: 'Rogue Dagger',
+          description: `After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn.`,
+          type: 'dagger',
+          mt: 4
+        },
+        {
+          name: 'Rogue Dagger+',
+          description: `After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn.`,
+          type: 'dagger',
+          mt: 7
+        },
+        {
+          name: 'Rogue Dagger+(atk)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Grants unit and allies within 2 spaces Def/Res+6 for 1 turn.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Rogue Dagger+(spd)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Grants unit and allies within 2 spaces Def/Res+6 for 1 turn.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Rogue Dagger+(def)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Grants unit and allies within 2 spaces Def/Res+6 for 1 turn.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Rogue Dagger+(res)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Grants unit and allies within 2 spaces Def/Res+6 for 1 turn.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Seashell',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2 during combat, but after combat, if unit attacked, deals 2 damage to unit. After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action.`,
+          type: 'dagger',
+          mt: 7
+        },
+        {
+          name: 'Seashell+',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2 during combat, but after combat, if unit attacked, deals 2 damage to unit. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action.`,
+          type: 'dagger',
+          mt: 10
+        },
+        {
+          name: 'Seashell+(atk)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2 during combat, but after combat, if unit attacked, deals 2 damage to unit. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Seashell+(spd)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2 during combat, but after combat, if unit attacked, deals 2 damage to unit. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Seashell+(def)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2 during combat, but after combat, if unit attacked, deals 2 damage to unit. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Seashell+(res)',
+          description: `At start of combat, if unit\'s HP = 100%, grants Atk/Spd/Def/Res+2 during combat, but after combat, if unit attacked, deals 2 damage to unit. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Sky Maiougi',
+          description: `Effective against armored foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8,
+          anti: 4
+        },
+        {
+          name: 'Sky Maiougi+',
+          description: `Effective against armored foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12,
+          anti: 4
+        },
+        {
+          name: 'Sky Maiougi+(atk)',
+          description: `Effective against armored foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2,
+          anti: 4
+        },
+        {
+          name: 'Sky Maiougi+(spd)',
+          description: `Effective against armored foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2,
+          anti: 4
+        },
+        {
+          name: 'Sky Maiougi+(def)',
+          description: `Effective against armored foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3,
+          anti: 4
+        },
+        {
+          name: 'Sky Maiougi+(res)',
+          description: `Effective against armored foes. Disables unit\'s and foe\'s skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3,
+          anti: 4
+        },
+        {
+          name: 'Smoke Dagger',
+          description: `After combat, if unit attacked, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 6
+        },
+        {
+          name: 'Smoke Dagger+',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 9
+        },
+        {
+          name: 'Smoke Dagger+(atk)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Smoke Dagger+(spd)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Smoke Dagger+(def)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Smoke Dagger+(res)',
+          description: `After combat, if unit attacked, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Starfish',
+          description: `If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8
+        },
+        {
+          name: 'Starfish+',
+          description: `If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12
+        },
+        {
+          name: 'Starfish+(atk)',
+          description: `If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'Starfish+(spd)',
+          description: `If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Starfish+(def)',
+          description: `If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Starfish+(res)',
+          description: `If unit\'s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'The Cleaner',
+          description: `Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 8
+        },
+        {
+          name: 'The Cleaner+',
+          description: `Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          mt: 12
+        },
+        {
+          name: 'The Cleaner+(atk)',
+          description: `Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 2,
+          mt: 13,
+          hp: 2
+        },
+        {
+          name: 'The Cleaner+(spd)',
+          description: `Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 3,
+          mt: 12,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'The Cleaner+(def)',
+          description: `Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 4,
+          mt: 12,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'The Cleaner+(res)',
+          description: `Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'dagger',
+          refine: 5,
+          mt: 12,
+          hp: 2,
+          res: 3
+        },
         // ============ PRF DAGGER ============= //
+        {
+          name: 'Deathly Dagger',
+          description: `If unit initiates combat, deals 7 damage to foe after combat. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action.`,
+          prf: true,
+          type: 'dagger',
+          mt: 11
+        },
+        {
+          name: 'Deathly Dagger(eff)',
+          description: `Magic foes cannot counterattack. If unit initiates combat, deals 10 damage to target and foes within 2 spaces of target. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 1,
+          mt: 14
+        },
+        {
+          name: 'Deathly Dagger(atk)',
+          description: `If unit initiates combat, deals 10 damage to target and foes within 2 spaces of target. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Deathly Dagger(spd)',
+          description: `If unit initiates combat, deals 10 damage to target and foes within 2 spaces of target. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Deathly Dagger(def)',
+          description: `If unit initiates combat, deals 10 damage to target and foes within 2 spaces of target. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Deathly Dagger(res)',
+          description: `If unit initiates combat, deals 10 damage to target and foes within 2 spaces of target. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Peshkatz',
+          description: `After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces of unit.`,
+          prf: true,
+          type: 'dagger',
+          mt: 14
+        },
+        {
+          name: 'Felicia\'s Plate',
+          description: `Damage calculated using the lower of foe\'s Def and Res. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action.`,
+          prf: true,
+          type: 'dagger',
+          mt: 14
+        },
+        {
+          name: 'Felicia\'s Plate(eff)',
+          description: `Damage calculated using the lower of foe\'s Def and Res. Grants Special cooldown charge+1 if foe uses magic (only highest bonus applied). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 1,
+          mt: 14
+        },
+        {
+          name: 'Felicia\'s Plate(atk)',
+          description: `Damage calculated using the lower of foe\'s Def and Res. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 2,
+          mt: 15,
+          hp: 2
+        },
+        {
+          name: 'Felicia\'s Plate(spd)',
+          description: `Damage calculated using the lower of foe\'s Def and Res. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 3,
+          mt: 14,
+          hp: 2,
+          spd: 2
+        },
+        {
+          name: 'Felicia\'s Plate(def)',
+          description: `Damage calculated using the lower of foe\'s Def and Res. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 4,
+          mt: 14,
+          hp: 2,
+          def: 3
+        },
+        {
+          name: 'Felicia\'s Plate(res)',
+          description: `Damage calculated using the lower of foe\'s Def and Res. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          refine: 5,
+          mt: 14,
+          hp: 2,
+          res: 3
+        },
+        {
+          name: 'Hoarfrost Knife',
+          description: `Accelerates Special trigger (cooldown count-1). If unit initiates combat and foe uses sword, lance, axe, or dragonstone, grants Def+20 during combat, and if foe can counter, unit makes a guaranteed follow-up attack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          mt: 14
+        },
+        {
+          name: 'Sylgr',
+          description: `Grants Spd+3. If unit\'s Spd > foe\'s Spd, grants Atk/Spd+4 during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.`,
+          prf: true,
+          type: 'dagger',
+          mt: 14,
+          spd: 3
+        },
         // =============== STAFF =============== //
         // ============= PRF STAFF ============= //
       ]);
