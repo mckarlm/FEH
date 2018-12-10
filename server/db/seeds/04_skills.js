@@ -8525,7 +8525,307 @@ exports.seed = function (knex, Promise) {
           spd: 3
         },
         // =============== STAFF =============== //
+        {
+          name: 'Assault',
+          description: ``,
+          type: 'staff',
+          mt: 10
+        },
+        {
+          name: 'Absorb',
+          description: `Restores HP = 50% of damage dealt.`,
+          type: 'staff',
+          mt: 4
+        },
+        {
+          name: 'Absorb+',
+          description: `Restores HP = 50% of damage dealt. After combat, if unit attacked, restores 7 HP to allies within 2 spaces.`,
+          type: 'staff',
+          mt: 7
+        },
+        {
+          name: 'Absorb+(wrathful)',
+          description: `Restores HP = 50% of damage dealt. After combat, if unit attacked, restores 7 HP to allies within 2 spaces.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 7
+        },
+        {
+          name: 'Absorb+(dazzling)',
+          description: `Restores HP = 50% of damage dealt. After combat, if unit attacked, restores 7 HP to allies within 2 spaces.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 7
+        },
+        {
+          name: 'Candlelight',
+          description: `After combat, if unit attacked, inflicts status on foe preventing counterattacks through its next action.`,
+          type: 'staff',
+          mt: 7
+        },
+        {
+          name: 'Candlelight+',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.`,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Candlelight+(wrathful)',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Candlelight+(dazzling)',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Fear',
+          description: `After combat, if unit attaceked, inflicts Atk-6 on foe through its next action.`,
+          type: 'staff',
+          mt: 5
+        },
+        {
+          name: 'Fear+',
+          description: `After combat, if unit attacked, inflicts Atk-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Fear+(wrathful)',
+          description: `After combat, if unit attacked, inflicts Atk-7 on target and foes within 2 spaces of target through their next actions.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 13
+        },
+        {
+          name: 'Fear+(dazzling)',
+          description: `After combat, if unit attacked, inflicts Atk-7 on target and foes within 2 spaces of target through their next actions.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 13
+        },
+        {
+          name: 'Flash',
+          description: `After combat, if unit attacked, inflicts status on foe preventing counterattacks through its next action.`,
+          type: 'staff',
+          mt: 7
+        },
+        {
+          name: 'Flash+',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.`,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Flash+(wrathful)',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Flash+(dazzling)',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Gravity',
+          description: `After combat, if unit attacked, inflicts status on foe restricting movement to 1 space through their next action.`,
+          type: 'staff',
+          mt: 6
+        },
+        {
+          name: 'Gravity+',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target restricting movement to 1 space through their next actions.`,
+          type: 'staff',
+          mt: 10
+        },
+        {
+          name: 'Gravity+(wrathful)',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target restricting movement to 1 space through their next actions.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 10
+        },
+        {
+          name: 'Gravity+(dazzling)',
+          description: `After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target restricting movement to 1 space through their next actions.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 10
+        },
+        {
+          name: 'Pain',
+          description: `After combat, if unit attacked, deals 10 damage to foe.`,
+          type: 'staff',
+          mt: 3
+        },
+        {
+          name: 'Pain+',
+          description: `After combat, if unit attacked, deals 10 damage to target and foes within 2 spaces of target.`,
+          type: 'staff',
+          mt: 10
+        },
+        {
+          name: 'Pain+(wrathful)',
+          description: `After combat, if unit attacked, deals 10 damage to target and foes within 2 spaces of target.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 10
+        },
+        {
+          name: 'Pain+(dazzling)',
+          description: `After combat, if unit attacked, deals 10 damage to target and foes within 2 spaces of target.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 10
+        },
+        {
+          name: 'Panic',
+          description: `After combat, if unit attacked, converts bonuses on foe into penalties through their next action.`,
+          type: 'staff',
+          mt: 7
+        },
+        {
+          name: 'Panic+',
+          description: `After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.`,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Panic+(wrathful)',
+          description: `After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Panic+(dazzling)',
+          description: `After combat, if unit attacked, converts bonuses on target and foes within 2 spaces of target into penalties through their next actions.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 11
+        },
+        {
+          name: 'Slow',
+          description: `After combat, if unit attacked, inflicts Spd-6 on foe through their next action.`,
+          type: 'staff',
+          mt: 5
+        },
+        {
+          name: 'Slow+',
+          description: `After combat, if unit attacked, inflicts Spd-7 on target and foes within 2 spaces of target through their next actions.`,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Slow+(wrathful)',
+          description: `After combat, if unit attacked, inflicts Spd-7 on target and foes within 2 spaces of target through their next actions.
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Slow+(dazzling)',
+          description: `After combat, if unit attacked, inflicts Spd-7 on target and foes within 2 spaces of target through their next actions.
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Trilemma',
+          description: `After combat, if unit attacked, inflicts the following status on foe through its next action: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\"`,
+          type: 'staff',
+          mt: 8
+        },
+        {
+          name: 'Trilemma+',
+          description: `After combat, if unit attacked, inflicts the following status on foe through its next action: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\"`,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Trilemma+(wrathful)',
+          description: `After combat, if unit attacked, inflicts the following status on foe through its next action: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\"
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Trilemma+(dazzling)',
+          description: `After combat, if unit attacked, inflicts the following status on foe through its next action: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\"
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Witchy Wand',
+          description: `After combat, if unit attacked, resets Special cooldown of foe, and inflicts the following status on foe through its next action: "Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)`,
+          type: 'staff',
+          mt: 5
+        },
+        {
+          name: 'Witchy Wand+',
+          description: `After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: "Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)`,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Witchy Wand+(wrathful)',
+          description: `After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: "Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)
+          Damage from unit\'s staff will be calculated the same as other weapons.`,
+          refine: 6,
+          type: 'staff',
+          mt: 12
+        },
+        {
+          name: 'Witchy Wand+(dazzling)',
+          description: `After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: "Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)
+          The foe cannot counterattack.`,
+          refine: 6,
+          type: 'staff',
+          mt: 12
+        },
         // ============= PRF STAFF ============= //
+        {
+          name: 'Hlidskjalf',
+          description: `Foe cannot counterattack. After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces for 1 turn.`,
+          prf: true,
+          type: 'staff',
+          mt: 14
+        },
+        {
+          name: 'Thokk',
+          description: `Calculates damage from staff like other weapons. At start of turn, if foe\'s HP ≤ unit\'s HP-3 and foe is in cardinal direction and uses bow, dagger, magic, or staff, foe cannot move more than 1 space through its action.`,
+          prf: true,
+          type: 'staff',
+          mt: 14
+        }
       ]);
     });
 };
@@ -8535,7 +8835,7 @@ exports.seed = function (knex, Promise) {
   name: '',
   description: ``,
   prf: true,
-  type: 'dagger',
+  type: 'staff',
   mt: 0
 },
 */
