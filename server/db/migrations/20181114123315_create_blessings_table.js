@@ -1,13 +1,11 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('seals', table => {
+  return knex.schema.createTable('blessings', table => {
     table.increments();
-    table.string('name').unique().notNullable();
-    table.text('description');
-    table.integer('level').defaultTo(1).notNullable();
+    table.string('blessing').unique().notNullable();
   });
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('seals');
+  return knex.schema.dropTable('blessings');
 };

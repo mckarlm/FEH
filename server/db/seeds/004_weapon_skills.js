@@ -1,10 +1,10 @@
 
 exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
-  return knex('skills').del()
+  return knex('weapon_skills').del()
     .then(function () {
       // Inserts seed entries
-      return knex('skills').insert([
+      return knex('weapon_skills').insert([
         // =============== SWORD =============== //
         {
           name: 'Iron Sword',
@@ -8829,13 +8829,3 @@ exports.seed = function (knex, Promise) {
       ]);
     });
 };
-
-/*
-{
-  name: '',
-  description: ``,
-  prf: true,
-  type: 'staff',
-  mt: 0
-},
-*/
