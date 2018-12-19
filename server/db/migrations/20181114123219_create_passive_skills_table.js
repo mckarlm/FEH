@@ -4,9 +4,9 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name').unique().notNullable();
     table.text('description');
+    table.string('type').notNullable();
+    table.integer('level').defaultTo(1).notNullable();
     table.boolean('prf').defaultTo(false).notNullable();
-    table.string('slot').notNullable();
-    table.integer('level').defaultTo(0).notNullable();
   });
 };
 

@@ -62,24 +62,36 @@ Black Luna
 /*
 PASSIVES
 
-Freezing Seal
-Chilling Seal
-Surtr's Menace
+Dragonskin
+Laws of Sacae
+Ostian Counter
+
+Beorc's Blessing
 Binding Shield
-With Everyone!
-Double Lion
+Bushido
+Chilling Seal
 Crusader's Ward
+Double Lion
 Follow-Up Ring
+Freezing Seal
+Lunar Brace
 Recover Ring
 S Drink
-Ostian Counter
-Ostia's Pulse
 Sacae's Blessing
-Laws of Sacae
-Lunar Brace
 Solar Brace
-Beorc's Blessing
 Warp Powder
-Dragonskin
-Bushido
+
+Ostia's Pulse
+Surtr's Menace
+With Everyone!
+
+==NEW SKILLS==
+++WEPS
+Sokkvabekkr sord
+??? g tome
+Lyfjaberg dagger
+
+++
+Mystic Boost
+Sparkling Boost
 */
