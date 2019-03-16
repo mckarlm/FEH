@@ -1,4 +1,12 @@
-# FEHApp
+# FEH-calc (Under Development)
+
+Calculator for the mobile game Fire Emblem Heroes. 
+
+Designed for users to simulate combat between two given units, while showing the calculations for the combat forecast.
+
+Database complete with skills until Hero Fest (December 2018).
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
